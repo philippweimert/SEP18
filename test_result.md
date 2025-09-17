@@ -232,8 +232,7 @@ metadata:
 test_plan:
   current_focus:
     - "bAV Page New Sections - Process Support & Benefits"
-  stuck_tasks:
-    - "bAV Page New Sections - Process Support & Benefits"
+  stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
