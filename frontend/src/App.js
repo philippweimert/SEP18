@@ -29,7 +29,6 @@ function App() {
           <Route path="/ueber-uns/service-team" element={<ServiceTeamPage />} />
           <Route path="/bav-rechtliche-grundlagen" element={<EmployerObligationsPage />} />
           <Route path="/die-bav" element={<DieBavPage />} />
-          <Route path="/die-bav/x" element={<DieBavPageX />} />
           <Route path="/die-bav/y" element={<DieBavPageY />} />
           <Route path="/die-bav/aktuelles" element={<AktuellesPage />} />
           <Route path="/die-bav/gesetzliche-pflichten" element={<GesetzlichePflichtenPage />} />
