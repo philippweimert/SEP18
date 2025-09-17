@@ -356,8 +356,8 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* Combined Definition & Challenges Section - Side by Side */}
-      <section className="bg-gray-50 py-16 md:py-20">
+      {/* Combined Definition & Challenges Section - Dunkelblauer Hintergrund */}
+      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
