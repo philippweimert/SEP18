@@ -474,8 +474,8 @@ const GesetzlichePflichtenPage = () => {
               Rechtlichen Rahmen optimal nutzen
             </h2>
             <p className="text-gray-200 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Lassen Sie sich von unseren Experten beraten, wie Sie alle gesetzlichen Pflichten 
-              erfüllen und gleichzeitig von den Vorteilen der bAV profitieren können.
+              Lassen Sie sich von unseren Experten beraten, wie Sie den rechtlichen Rahmen optimal nutzen 
+              und gleichzeitig von allen Chancen und Vorteilen der bAV profitieren können.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
