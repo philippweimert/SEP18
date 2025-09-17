@@ -148,6 +148,185 @@ const GesetzlichePflichtenPage = () => {
         </div>
       </section>
 
+      {/* Steuerrechtliche Grundlagen Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center mr-4">
+                <FileText className="w-6 h-6 text-green-300" />
+              </div>
+              <h2 className="text-3xl font-semibold text-white tracking-tight">
+                Steuerrechtliche Grundlagen & Ersparnisse
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4">Einkommensteuerliche Regelungen</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="text-sm font-medium text-green-300">§ 3 Nr. 63 EStG:</span>
+                      <p className="text-gray-300 text-sm">Steuerfreiheit der Arbeitgeberbeiträge zur bAV bis zu den Höchstgrenzen</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="text-sm font-medium text-green-300">§ 40b EStG:</span>
+                      <p className="text-gray-300 text-sm">Pauschalbesteuerung von Direktversicherungen mit 20%</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="text-sm font-medium text-green-300">§ 10a EStG:</span>
+                      <p className="text-gray-300 text-sm">Sonderausgabenabzug für Altersvorsorgeaufwendungen</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4">Sozialversicherungsrechtliche Regelungen</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="text-sm font-medium text-green-300">§ 1a SGB IV:</span>
+                      <p className="text-gray-300 text-sm">Sozialversicherungsfreiheit der Entgeltumwandlung</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="text-sm font-medium text-green-300">§ 17 SGB IV:</span>
+                      <p className="text-gray-300 text-sm">Befreiung von Sozialversicherungsbeiträgen bei Entgeltumwandlung</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <span className="text-sm font-medium text-green-300">§ 2 BetrAVG:</span>
+                      <p className="text-gray-300 text-sm">Unverfallbarkeit und Übertragbarkeit von Anwartschaften</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-green-600/10 rounded-lg border border-green-400/20">
+              <h4 className="text-lg font-semibold text-white mb-3">Praktische Steuerersparnis</h4>
+              <p className="text-gray-200 text-sm leading-relaxed mb-4">
+                Durch die gesetzlichen Regelungen können Arbeitgeber und Arbeitnehmer erhebliche Steuer- und Sozialabgabenersparnisse erzielen. 
+                Bei einer Entgeltumwandlung von 200€ monatlich spart der Arbeitgeber beispielsweise ca. 40€ an Sozialversicherungsbeiträgen - 
+                davon sind mindestens 15% (30€) als Zuschuss an den Arbeitnehmer weiterzuleiten.
+              </p>
+              <div className="flex justify-center">
+                <Button 
+                  className="bg-green-600/70 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center space-x-2"
+                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Kostenloses Erstgespräch buchen</span>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Chancen für Arbeitgeber Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
+              Chancen für Arbeitgeber
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Wie die bAV Ihr Unternehmen stärkt und nachhaltigen Erfolg schafft.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
+                  <Users className="w-6 h-6 text-blue-300" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Mitarbeiterbindung & -gewinnung
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    Attraktive bAV-Angebote stärken die Arbeitgeberattraktivität im Wettbewerb um Fachkräfte und reduzieren die Fluktuation merklich.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-green-300" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Steuerliche Vorteile
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    Sozialversicherungsersparnisse durch Entgeltumwandlung und steuerliche Begünstigungen der Arbeitgeberbeiträge gemäß EStG.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center">
+                  <Building2 className="w-6 h-6 text-purple-300" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Imagegewinn & CSR
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    Positionierung als verantwortungsbewusster Arbeitgeber und Stärkung der Corporate Social Responsibility.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center">
+                  <ArrowRight className="w-6 h-6 text-orange-300" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Kosteneffiziente Zusatzleistung
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    Erhöhung der Nettoentlohnung ohne zusätzliche Arbeitgeberkosten durch geschickte Nutzung steuerlicher Vorteile.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button 
+              className="bg-acencia-accent/70 hover:bg-acencia-accent text-white px-8 py-4 rounded-lg font-medium transition-colors duration-150 flex items-center space-x-2 mx-auto"
+              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+            >
+              <Calendar className="w-5 h-5" />
+              <span>Jetzt Chancen besprechen - Kostenloses Erstgespräch</span>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Obligations Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
