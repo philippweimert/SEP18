@@ -252,9 +252,10 @@ const DieBavPage = () => {
               {/* Video Player */}
               <div className="bg-black/30 backdrop-blur-sm rounded-lg mb-8 relative overflow-hidden border border-white/10" style={{ aspectRatio: '16/9' }}>
                 <iframe 
+                  id="bav-video-player"
                   width="100%" 
                   height="100%" 
-                  src="https://www.youtube.com/embed/Dw1XYzzPTkY?si=YJI9RltcoRzwO1iY" 
+                  src="https://www.youtube.com/embed/Dw1XYzzPTkY?enablejsapi=1&rel=0&modestbranding=1&controls=1&showinfo=0" 
                   title="YouTube video player" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -262,6 +263,40 @@ const DieBavPage = () => {
                   allowFullScreen
                   className="absolute inset-0 rounded-lg"
                 ></iframe>
+                
+                {/* Video End Overlay - Black Screen */}
+                {showVideoOverlay && (
+                  <div className="absolute inset-0 bg-black flex items-center justify-center z-10 rounded-lg">
+                    <div className="text-center max-w-sm mx-4">
+                      <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Play className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-semibold text-white mb-4">Video beendet</h3>
+                      <p className="text-gray-300 mb-6 text-sm">Möchten Sie das Video erneut ansehen?</p>
+                      <div className="space-y-3">
+                        <button
+                          onClick={() => {
+                            if (player) {
+                              player.seekTo(0);
+                              player.playVideo();
+                              setShowVideoOverlay(false);
+                            }
+                          }}
+                          className="w-full bg-acencia-accent hover:bg-acencia-accent-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
+                        >
+                          <Play className="w-4 h-4" />
+                          <span>Erneut ansehen</span>
+                        </button>
+                        <button
+                          onClick={() => setShowVideoOverlay(false)}
+                          className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150"
+                        >
+                          Schließen
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Onboarding Card */}
