@@ -1,0 +1,315 @@
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Button } from "./ui/button";
+import { Scale, AlertTriangle, CheckCircle, FileText, Users, ArrowRight, Calendar } from "lucide-react";
+
+const GesetzlichePflichtenPage = () => {
+  const obligations = [
+    {
+      title: "Anspruch auf Entgeltumwandlung (§ 1a BetrAVG)",
+      description: "Jeder Arbeitnehmer hat seit 2002 einen gesetzlichen Anspruch auf Entgeltumwandlung.",
+      details: "Arbeitgeber sind verpflichtet, mindestens den Weg über eine Direktversicherung anzubieten.",
+      icon: <Users className="w-5 h-5" />
+    },
+    {
+      title: "Arbeitgeberzuschuss seit 2022 (15%)",
+      description: "Seit 01.01.2022 müssen Arbeitgeber 15% der gesparten Sozialversicherungsbeiträge weiterleiten.",
+      details: "Dies gilt für alle neu abgeschlossenen Entgeltumwandlungen. Für Altverträge gilt eine Übergangsfrist bis 2025.",
+      icon: <FileText className="w-5 h-5" />
+    },
+    {
+      title: "Informationspflichten",
+      description: "Arbeitgeber müssen über Möglichkeiten und Auswirkungen der bAV aufklären.",
+      details: "Dazu gehören Informationen über steuerliche Auswirkungen, Sozialversicherung und Auswirkungen auf andere Sozialleistungen.",
+      icon: <AlertTriangle className="w-5 h-5" />
+    },
+    {
+      title: "Dokumentationspflichten",
+      description: "Ordnungsgemäße Führung von Unterlagen und Nachweisen.",
+      details: "Alle bAV-relevanten Dokumente müssen aufbewahrt und bei Bedarf vorgelegt werden können.",
+      icon: <Scale className="w-5 h-5" />
+    }
+  ];
+
+  const risks = [
+    {
+      title: "Haftungsrisiken",
+      description: "Bei fehlerhafter Beratung oder unvollständiger Aufklärung können Schadensersatzansprüche entstehen."
+    },
+    {
+      title: "Compliance-Verstöße",
+      description: "Nichteinhaltung gesetzlicher Vorgaben kann zu rechtlichen Konsequenzen führen."
+    },
+    {
+      title: "Verwaltungsaufwand",
+      description: "Komplexe Administration kann ohne professionelle Unterstützung überfordernd werden."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
+              Gesetzliche <span className="text-acencia-accent">Pflichten</span> – bAV
+            </h1>
+            <p className="text-xl text-gray-300 mb-4 leading-relaxed">
+              Was Arbeitgeber bei der betrieblichen Altersvorsorge beachten müssen
+            </p>
+            <p className="text-sm text-gray-400">
+              Informationen aus dem Geschäftsbetrieb gemäß §93 HGB
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Two Boxes Side by Side Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Left Box - Rechtlicher Rahmen */}
+            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center mr-4">
+                  <Scale className="w-6 h-6 text-acencia-accent" />
+                </div>
+                <h2 className="text-3xl font-semibold text-white tracking-tight">
+                  Rechtlicher Rahmen
+                </h2>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-gray-200 leading-relaxed">
+                  Die betriebliche Altersvorsorge ist nicht nur eine freiwillige Zusatzleistung, sondern bringt 
+                  auch gesetzliche Verpflichtungen für Arbeitgeber mit sich. Diese ergeben sich hauptsächlich 
+                  aus dem Betriebsrentengesetz (BetrAVG) und weiteren relevanten Gesetzen.
+                </p>
+                <p className="text-gray-200 leading-relaxed">
+                  Seit der Einführung des Rechtsanspruchs auf Entgeltumwandlung im Jahr 2002 und den verschärften 
+                  Regelungen seit 2018 (Betriebsrentenstärkungsgesetz) sind die Anforderungen deutlich gestiegen.
+                </p>
+                
+                <div className="bg-black/40 backdrop-blur-sm rounded-lg p-6 border border-acencia-accent/20 mt-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">Wichtige Gesetze</h3>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Betriebsrentengesetz (BetrAVG)</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Betriebsrentenstärkungsgesetz (BRSG)</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Einkommensteuergesetz (EStG)</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Sozialgesetzbuch IV (SGB IV)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Box - Bedeutung der bAV im Wettbewerb um Fachkräfte */}
+            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center mr-4">
+                  <Users className="w-6 h-6 text-acencia-accent" />
+                </div>
+                <h2 className="text-3xl font-semibold text-white tracking-tight">
+                  Bedeutung der bAV im Wettbewerb um Fachkräfte
+                </h2>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-gray-200 leading-relaxed">
+                  In Zeiten des demografischen Wandels und des Fachkräftemangels wird die betriebliche Altersvorsorge zu einem 
+                  entscheidenden Faktor im Wettbewerb um qualifizierte Mitarbeitende. Unternehmen, die eine durchdachte bAV-Strategie 
+                  implementieren, verschaffen sich nicht nur einen Wettbewerbsvorteil, sondern übernehmen auch gesellschaftliche Verantwortung.
+                </p>
+                <p className="text-gray-200 leading-relaxed">
+                  <strong className="text-white">Gesetzliche Rahmenbedingungen:</strong> Die Berücksichtigung aktueller Gesetze und Verordnungen 
+                  ist nicht nur eine rechtliche Notwendigkeit, sondern auch ein Zeichen für verantwortungsvolle Unternehmensführung. 
+                  Eine professionell gestaltete bAV stärkt das Vertrauen der Mitarbeitenden und das Image des Unternehmens.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Obligations Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
+              Ihre Pflichten als Arbeitgeber
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Diese gesetzlichen Verpflichtungen müssen alle Arbeitgeber bei der bAV beachten.
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            {obligations.map((obligation, index) => (
+              <div key={index} className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center">
+                    <div className="text-acencia-accent">
+                      {obligation.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      {obligation.title}
+                    </h3>
+                    <p className="text-gray-200 leading-relaxed mb-3 font-medium">
+                      {obligation.description}
+                    </p>
+                    <p className="text-gray-300 leading-relaxed text-sm">
+                      {obligation.details}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Risks Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-red-600/20 rounded-lg flex items-center justify-center mr-4">
+                <AlertTriangle className="w-6 h-6 text-red-400" />
+              </div>
+              <h2 className="text-3xl font-semibold text-white tracking-tight">
+                Risiken bei Nichteinhaltung
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {risks.map((risk, index) => (
+                <div key={index} className="bg-black/40 backdrop-blur-sm rounded-lg p-6 border border-red-400/30">
+                  <div className="flex items-start space-x-3 mb-4">
+                    <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {risk.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-200 leading-relaxed text-sm">
+                    {risk.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-acencia-accent/20 rounded-lg flex items-center justify-center mr-4">
+                <CheckCircle className="w-6 h-6 text-acencia-accent" />
+              </div>
+              <h2 className="text-3xl font-semibold text-white tracking-tight">
+                Wie ACENCIA Sie unterstützt
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <p className="text-gray-200 leading-relaxed mb-4">
+                  ACENCIA entlastet Sie bei der rechtskonformen Umsetzung Ihrer bAV-Pflichten. 
+                  Unsere digitale Plattform automatisiert die Verwaltung und stellt sicher, 
+                  dass alle gesetzlichen Anforderungen erfüllt werden.
+                </p>
+                <p className="text-gray-200 leading-relaxed">
+                  Von der korrekten Dokumentation bis hin zur automatischen Berechnung des 
+                  15%-Arbeitgeberzuschusses – wir sorgen für Rechtssicherheit und Compliance.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4">Unsere Leistungen</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-acencia-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-200 text-sm">Rechtskonforme Einrichtung</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-acencia-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-200 text-sm">Automatische Compliance-Prüfung</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-acencia-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-200 text-sm">Vollständige Dokumentation</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-acencia-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-200 text-sm">Mitarbeiterkommunikation</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-acencia-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-200 text-sm">Laufende Aktualisierung</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-acencia-accent/30 text-center">
+            <div className="w-16 h-16 bg-acencia-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Calendar className="w-8 h-8 text-acencia-accent" />
+            </div>
+            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
+              Rechtssichere bAV implementieren
+            </h2>
+            <p className="text-gray-200 mb-8 leading-relaxed max-w-2xl mx-auto">
+              Lassen Sie sich von unseren Experten beraten, wie Sie alle gesetzlichen Pflichten 
+              erfüllen und gleichzeitig von den Vorteilen der bAV profitieren können.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="bg-acencia-accent/70 hover:bg-acencia-accent text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
+                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+              >
+                <span>Kostenlose Beratung vereinbaren</span>
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+              <Button 
+                className="bg-black/40 border border-white/20 hover:bg-black/60 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150"
+                onClick={() => window.location.href = '/die-bav'}
+              >
+                Zurück zur bAV-Übersicht
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default GesetzlichePflichtenPage;
