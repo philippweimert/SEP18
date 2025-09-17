@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Company Info */}
-          <div className="md:col-span-7">
+          <div className="md:col-span-12">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8">
               <Link to="/" className="block mb-6 md:mb-0">
                 <div className="text-2xl font-semibold text-gray-900 tracking-tight">
@@ -62,56 +62,6 @@ const Footer = () => {
                 </button>
               </div>
             </div>
-            
-            <div className="space-y-4">
-              <p className="text-gray-600 text-base leading-relaxed font-normal max-w-lg">
-                Über 30 Jahren Erfahrung in der betrieblichen Altersvorsorge.<br />
-                einfach und digital.
-              </p>
-              <div className="text-sm text-gray-500 space-y-1">
-                <p className="font-medium text-gray-700">ACENCIA GmbH</p>
-                <p>Hackenheim, Deutschland</p>
-                <p>Geschäftsführer: Uwe Weimert</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="md:col-span-2">
-            <h3 className="text-base font-semibold mb-6 text-gray-900">Navigation</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/ueber-uns" className="text-gray-600 hover:text-orange-600 transition-colors duration-150 text-sm font-normal">
-                  Über uns
-                </Link>
-              </li>
-              <li>
-                <Link to="/kontakt" className="text-gray-600 hover:text-orange-600 transition-colors duration-150 text-sm font-normal">
-                  Kontakt
-                </Link>
-              </li>
-              <li>
-                <a 
-                  href="https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-orange-600 transition-colors duration-150 text-sm font-normal"
-                >
-                  Termin vereinbaren
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="md:col-span-3">
-            <h3 className="text-base font-semibold mb-6 text-gray-900">Services</h3>
-            <ul className="space-y-3 text-gray-600">
-              <li className="text-sm font-normal">Rechtliche Prüfung & Einrichtung</li>
-              <li className="text-sm font-normal">Digitale bAV-Verwaltung</li>
-              <li className="text-sm font-normal">Mitarbeiterkommunikation</li>
-              <li className="text-sm font-normal">Persönliche Beratung</li>
-            </ul>
           </div>
         </div>
 
