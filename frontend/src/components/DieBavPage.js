@@ -249,7 +249,7 @@ const DieBavPage = () => {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten, digitalen All-in-One-Plattform für die betriebliche Altersvorsorge.
+                Entlasten Sie Ihr HR-Team mit unserer digitalen & automatisierten All-in-One-Plattform für die betriebliche Altersvorsorge.
               </p>
 
               {/* Benefits List */}
