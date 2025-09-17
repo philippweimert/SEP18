@@ -78,8 +78,8 @@ const GoogleReviews = () => {
             <Quote className="w-8 h-8 text-acencia-accent" />
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight text-white tracking-tight">
-            Das sagen unsere <span className="text-acencia-accent">Kunden</span>
+          <h2 className="text-3xl font-semibold mb-4 text-white tracking-tight">
+            Das sagen unsere Kunden
           </h2>
           
           <div className="flex items-center justify-center space-x-4 mb-8">
