@@ -73,26 +73,26 @@ const GoogleReviews = () => {
   const duplicatedReviews = [...reviews, ...reviews];
 
   return (
-    <section className="bg-white py-16 md:py-20 overflow-hidden">
+    <section className="py-16 md:py-20 overflow-hidden" style={{backgroundColor: '#001f3d'}}>
       {/* Apple-like Container */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         {/* Apple-like Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight text-gray-900 tracking-tight">
-            Das sagen unsere <span className="text-orange-600">Kunden</span>
+          <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight text-white tracking-tight">
+            Das sagen unsere <span className="text-acencia-accent">Kunden</span>
           </h2>
           
           <div className="flex items-center justify-center space-x-3 mb-6">
             <div className="flex items-center space-x-1">
               {[1,2,3,4,5].map((star) => (
-                <Star key={star} className="w-6 h-6 text-orange-500 fill-orange-500" />
+                <Star key={star} className="w-6 h-6 text-acencia-accent fill-acencia-accent" />
               ))}
             </div>
-            <span className="text-gray-900 font-semibold text-xl">4.9</span>
-            <span className="text-gray-500 text-base">aus 100+ Bewertungen</span>
+            <span className="text-white font-semibold text-xl">4.9</span>
+            <span className="text-gray-300 text-base">aus 100+ Bewertungen</span>
           </div>
           
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-normal">
             Vertrauen Sie auf die Erfahrungen zufriedener Unternehmen
           </p>
         </div>
