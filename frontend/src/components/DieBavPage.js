@@ -634,17 +634,17 @@ const DieBavPage = () => {
             </p>
           </div>
           
-          {/* Premium Cards - gleiches Design wie CustomerSegments */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          {/* Premium Cards - 4x1 Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {benefitsCards.map((card, index) => (
               <div key={index} className="flex flex-col items-center">
                 {/* Hexagonal Card */}
                 <div 
-                  className="relative w-full h-40 rounded-3xl cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-8 mb-6"
+                  className="relative w-full h-32 rounded-3xl cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-6 mb-4"
                   style={{
                     background: 'linear-gradient(145deg, #0b2a3d 0%, #0a2637 100%)',
                     boxShadow: '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)',
-                    borderRadius: '24px'
+                    borderRadius: '20px'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow = '0 20px 40px rgba(11,42,61,.2), 0 8px 16px rgba(11,42,61,.12), 0 0 0 1px rgba(236,210,184,.1)';
@@ -654,8 +654,8 @@ const DieBavPage = () => {
                   }}
                 >
                   {/* Hexagon Badge */}
-                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 grid place-items-center group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 8px 16px rgba(0,0,0,.2))'}}>
-                    <svg className="w-28 h-28 absolute inset-0" viewBox="0 0 100 100">
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 grid place-items-center group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 6px 12px rgba(0,0,0,.2))'}}>
+                    <svg className="w-20 h-20 absolute inset-0" viewBox="0 0 100 100">
                       <polygon 
                         points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5"
                         fill="#092130"
@@ -674,7 +674,7 @@ const DieBavPage = () => {
                     
                     {/* Icon Container */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-14 h-14">
+                      <div className="w-10 h-10">
                         {card.icon}
                       </div>
                     </div>
@@ -682,13 +682,13 @@ const DieBavPage = () => {
                   
                   {/* Label */}
                   <div 
-                    className="w-5/6 h-12 rounded-2xl flex items-center justify-center font-semibold text-base tracking-wide relative overflow-hidden px-4"
+                    className="w-11/12 h-10 rounded-xl flex items-center justify-center font-semibold text-sm tracking-wide relative overflow-hidden px-3"
                     style={{
                       background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
                       color: '#0b2a3d',
-                      fontSize: '16px',
+                      fontSize: '14px',
                       fontWeight: '600',
-                      letterSpacing: '.4px',
+                      letterSpacing: '.3px',
                       boxShadow: 'inset 0 2px 4px rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.08)'
                     }}
                   >
@@ -708,8 +708,8 @@ const DieBavPage = () => {
                   <div 
                     className="absolute left-1/2 transform -translate-x-1/2 rounded-full"
                     style={{
-                      bottom: '15px',
-                      width: '60%',
+                      bottom: '10px',
+                      width: '50%',
                       height: '2px',
                       background: 'linear-gradient(90deg, transparent, rgba(236,210,184,.5) 20%, rgba(236,210,184,.7) 50%, rgba(236,210,184,.5) 80%, transparent)',
                       opacity: '0.8'
@@ -729,8 +729,8 @@ const DieBavPage = () => {
                 </div>
 
                 {/* Description direkt unter der Karte */}
-                <div className="text-center max-w-sm">
-                  <p className="text-gray-300 text-sm leading-relaxed">{card.description}</p>
+                <div className="text-center">
+                  <p className="text-gray-300 text-xs leading-relaxed px-2">{card.description}</p>
                 </div>
               </div>
             ))}
