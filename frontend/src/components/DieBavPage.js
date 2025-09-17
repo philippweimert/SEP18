@@ -547,27 +547,62 @@ const DieBavPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {processSupportCards.map((card, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-150">
+              <div 
+                key={index} 
+                className="rounded-3xl border border-gray-200 hover:border-gray-300 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-105"
+                style={{
+                  background: 'linear-gradient(145deg, #0b2a3d 0%, #0a2637 100%)',
+                  boxShadow: '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)',
+                  borderRadius: '24px'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(11,42,61,.2), 0 8px 16px rgba(11,42,61,.12), 0 0 0 1px rgba(236,210,184,.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)';
+                }}
+              >
                 {/* Collapsed State */}
                 <div 
-                  className="cursor-pointer p-6 flex flex-col items-center text-center"
+                  className="p-6 flex flex-col items-center text-center"
                   onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
                 >
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <div className="text-acencia-accent">
+                  <div 
+                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
+                      boxShadow: 'inset 0 2px 4px rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.08)'
+                    }}
+                  >
+                    <div style={{ color: '#0b2a3d' }}>
                       {card.icon}
                     </div>
                   </div>
                   
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-lg font-semibold text-white mb-2">
                     {card.title}
                   </h3>
                   
-                  <p className="text-sm font-medium text-acencia-accent mb-3">
-                    {card.subtitle}
-                  </p>
+                  <div 
+                    className="text-sm font-medium mb-3 px-3 py-1 rounded-full relative overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
+                      color: '#0b2a3d'
+                    }}
+                  >
+                    <span className="relative z-10">{card.subtitle}</span>
+                    
+                    {/* Shine effect */}
+                    <div 
+                      className="absolute top-0 w-full h-full transition-all duration-500 group-hover:left-full"
+                      style={{
+                        left: '-100%',
+                        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent)'
+                      }}
+                    ></div>
+                  </div>
 
-                  <div className="text-gray-400 mt-2">
+                  <div className="text-gray-300 mt-2">
                     {expandedProcessCard === index ? (
                       <ChevronUp className="w-5 h-5" />
                     ) : (
@@ -581,8 +616,13 @@ const DieBavPage = () => {
                   expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="px-6 pb-6">
-                    <div className="border-t border-gray-200 pt-4">
-                      <p className="text-gray-600 leading-relaxed text-sm">
+                    <div 
+                      className="pt-4"
+                      style={{
+                        borderTop: '1px solid rgba(236,210,184,.2)'
+                      }}
+                    >
+                      <p className="text-gray-300 leading-relaxed text-sm">
                         {card.description}
                       </p>
                     </div>
