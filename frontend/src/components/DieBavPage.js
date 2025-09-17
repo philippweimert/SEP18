@@ -516,21 +516,23 @@ const DieBavPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((index) => (
+            {benefitsCards.map((card, index) => (
               <div 
                 key={index}
                 className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full"
               >
-                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 bg-gray-300 rounded"></div>
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="text-green-600">
+                    {card.icon}
+                  </div>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Vorteil {index}
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  {card.title}
                 </h3>
                 
                 <p className="text-gray-600 leading-relaxed text-sm">
-                  Hier wird später der Inhalt für Vorteil {index} eingefügt.
+                  {card.description}
                 </p>
               </div>
             ))}
