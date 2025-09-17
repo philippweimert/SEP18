@@ -368,18 +368,32 @@ const DieBavPage = () => {
                       <Shield className="w-5 h-5 text-acencia-accent mr-2" />
                       Definition & Grundlagen
                     </h4>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       <p className="text-gray-200 leading-relaxed text-sm">
                         Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. Sie ergänzt die gesetzliche Rente und bildet die zweite Säule des deutschen Drei-Säulen-Systems.
                       </p>
                       
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Bei der Entgeltumwandlung wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet. Dadurch reduzieren sich Steuern und Sozialabgaben für beide Parteien.
+                        Bei der Entgeltumwandlung wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet. Dadurch reduzieren sich Steuern und Sozialabgaben während der Erwerbsphase, was sowohl Arbeitnehmer als auch Arbeitgeber finanziell entlastet.
                       </p>
 
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Seit 2002 haben alle Arbeitnehmer einen gesetzlichen Anspruch auf Entgeltumwandlung. Moderne bAV-Lösungen sind digital, automatisiert und entlasten die Personalabteilung erheblich.
+                        Seit 2002 haben alle Arbeitnehmer einen gesetzlichen Anspruch auf Entgeltumwandlung. Arbeitgeber müssen mindestens 15% Zuschuss leisten, wenn sie durch die Entgeltumwandlung Sozialversicherungsbeiträge sparen.
                       </p>
+
+                      <p className="text-gray-200 leading-relaxed text-sm">
+                        Moderne bAV-Lösungen sind digital, automatisiert und rechtssicher. Sie entlasten die Personalabteilung und schaffen Transparenz für alle Beteiligten.
+                      </p>
+
+                      <div className="mt-4">
+                        <button
+                          onClick={() => window.open('/bav-rechtliche-grundlagen', '_blank')}
+                          className="inline-flex items-center px-4 py-2 bg-acencia-accent/70 hover:bg-acencia-accent text-white text-xs font-medium rounded-lg transition-colors duration-150"
+                        >
+                          <Shield className="w-3 h-3 mr-1" />
+                          Erfahren Sie mehr zu Pflichten & Chancen
+                        </button>
+                      </div>
                     </div>
                   </div>
 
