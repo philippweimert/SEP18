@@ -229,7 +229,7 @@ const AktuellesPage = () => {
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
-                        <span>{new Date(article.date).toLocaleDateString('de-DE')}</span>
+                        <span className="text-gray-300">{new Date(article.date).toLocaleDateString('de-DE')}</span>
                       </div>
                     </div>
 
