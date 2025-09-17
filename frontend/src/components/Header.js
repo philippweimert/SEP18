@@ -76,29 +76,12 @@ const Header = () => {
               bKV
             </Link>
             
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIsBuvDropdownOpen(true)}
-              onMouseLeave={() => setIsBuvDropdownOpen(false)}
+            <Link 
+              to="/buv" 
+              className="text-white hover:text-orange-400 font-medium text-sm transition-colors duration-200 py-2"
             >
-              <Link 
-                to="/buv" 
-                className="text-white hover:text-orange-400 font-medium text-sm transition-colors duration-200 py-2"
-              >
-                bUV
-              </Link>
-              
-              <div className={`absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-sm py-2 transition-all duration-200 ${
-                isBuvDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-              }`}>
-                <Link 
-                  to="/buv/x" 
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
-                >
-                  Für Unternehmen
-                </Link>
-              </div>
-            </div>
+              bUV
+            </Link>
             
             <div 
               className="relative group"
