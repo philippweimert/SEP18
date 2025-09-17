@@ -370,50 +370,28 @@ const DieBavPage = () => {
                     </h4>
                     <div className="space-y-4">
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
-                        Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
+                        Die betriebliche Altersvorsorge (bAV) ist eine zentrale Säule der Altersvorsorge in Deutschland und stellt neben der gesetzlichen Rente und der privaten Vorsorge die zweite Säule des Drei-Säulen-Systems dar. Sie wird über den Arbeitgeber organisiert und bietet sowohl Arbeitnehmern als auch Arbeitgebern erhebliche Vorteile.
                       </p>
                       
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
+                        Das Grundprinzip der Entgeltumwandlung ermöglicht es Arbeitnehmern, einen Teil ihres Bruttogehalts für die Altersvorsorge zu verwenden. Dadurch reduzieren sich sowohl die Steuer- als auch die Sozialabgabenlast während der Erwerbsphase. Der umgewandelte Betrag wird in einen Versicherungsvertrag eingezahlt und später als Rente oder Kapitalleistung ausgezahlt.
                       </p>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                        <div>
-                          <h5 className="text-sm font-medium text-white mb-2">Vorteile für Arbeitnehmer:</h5>
-                          <ul className="space-y-1">
-                            <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-300">Steuer- und Sozialabgabenersparnis</span>
-                            </li>
-                            <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-300">Zusätzliche Altersvorsorge</span>
-                            </li>
-                            <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-300">Rechtlicher Anspruch seit 2002</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="text-sm font-medium text-white mb-2">Vorteile für Arbeitgeber:</h5>
-                          <ul className="space-y-1">
-                            <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-300">Mitarbeiterbindung stärken</span>
-                            </li>
-                            <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-300">Attraktivität als Arbeitgeber</span>
-                            </li>
-                            <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-300">Sozialabgabenersparnis möglich</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                      <p className="text-gray-200 leading-relaxed text-sm">
+                        Die bAV kann über verschiedene Durchführungswege realisiert werden: Direktversicherung, Pensionskasse, Pensionsfonds, Direktzusage oder Unterstützungskasse. Jeder Durchführungsweg hat spezifische Eigenschaften bezüglich Steuerbehandlung, Insolvenzschutz und Portabilität.
+                      </p>
+
+                      <p className="text-gray-200 leading-relaxed text-sm">
+                        Seit 2002 haben alle Arbeitnehmer einen gesetzlichen Anspruch auf Entgeltumwandlung. Der Arbeitgeber ist verpflichtet, mindestens 15% Zuschuss zu leisten, wenn er durch die Entgeltumwandlung Sozialversicherungsbeiträge spart. Diese Regelung stärkt die Position der Arbeitnehmer und macht die bAV noch attraktiver.
+                      </p>
+
+                      <p className="text-gray-200 leading-relaxed text-sm">
+                        Moderne bAV-Lösungen sind digital, automatisiert und rechtssicher. Sie entlasten die Personalabteilung erheblich und bieten gleichzeitig eine hohe Transparenz für alle Beteiligten. Die komplexe Verwaltung wird durch spezialisierte Anbieter übernommen, wodurch Unternehmen sich auf ihr Kerngeschäft konzentrieren können.
+                      </p>
+
+                      <p className="text-gray-200 leading-relaxed text-sm">
+                        Die bAV ist nicht nur ein wichtiger Baustein der Altersvorsorge, sondern auch ein wertvolles Instrument zur Mitarbeiterbindung und -gewinnung. In Zeiten des Fachkräftemangels wird sie zu einem entscheidenden Wettbewerbsvorteil für Unternehmen aller Größenordnungen.
+                      </p>
                     </div>
                   </div>
 
