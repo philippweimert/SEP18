@@ -91,27 +91,27 @@ const BkvPage = () => {
       </section>
 
       {/* Info Section */}
-      <section className="bg-gray-50 py-16 md:py-20">
+      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="bg-white rounded-lg p-8 border border-gray-200">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                <Heart className="w-6 h-6 text-orange-600" />
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center mr-4">
+                <Heart className="w-6 h-6 text-acencia-accent" />
               </div>
-              <h2 className="text-3xl font-semibold text-gray-900 tracking-tight">
+              <h2 className="text-3xl font-semibold text-white tracking-tight">
                 Was ist betriebliche Krankenversicherung?
               </h2>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-200 leading-relaxed">
                   Die betriebliche Krankenversicherung (bKV) ist eine Zusatzversicherung, die Arbeitgeber für ihre Mitarbeiter abschließen können. 
                   Sie ergänzt die gesetzliche Krankenversicherung um attraktive Mehrleistungen.
                 </p>
               </div>
               <div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-200 leading-relaxed">
                   Als steuerfreier Sachbezug bis 50 Euro monatlich bietet die bKV sowohl für Arbeitgeber als auch Arbeitnehmer 
                   erhebliche Vorteile bei der Mitarbeiterbindung und Gesundheitsvorsorge.
                 </p>
