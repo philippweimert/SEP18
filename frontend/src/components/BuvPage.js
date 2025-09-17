@@ -12,15 +12,6 @@ const BuvPage = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const moreInfoBoxes = [
-    {
-      title: "Für Unternehmen",
-      description: "Entdecken Sie die Vorteile der betrieblichen Unfallversicherung als zusätzlicher Schutz für Ihre Mitarbeiter.",
-      icon: <Building2 className="w-6 h-6" />,
-      link: "/buv/x"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
