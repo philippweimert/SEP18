@@ -330,24 +330,24 @@ const DieBavPage = () => {
             {/* Definition Section - Left */}
             <div>
               <div 
-                className="cursor-pointer bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-all duration-150 h-32 flex items-center"
+                className="cursor-pointer bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-black/40 transition-all duration-150 h-32 flex items-center"
                 onClick={() => setIsDefinitionExpanded(!isDefinitionExpanded)}
               >
                 <div className="flex items-center justify-between w-full">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Shield className="w-6 h-6 text-acencia-accent" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                      <h3 className="text-xl font-semibold text-white mb-1">
                         Was ist betriebliche Altersvorsorge?
                       </h3>
-                      <p className="text-gray-600 text-sm leading-tight">
+                      <p className="text-gray-300 text-sm leading-tight">
                         Klicken Sie hier, um mehr über bAV und Ihre Rechte zu erfahren
                       </p>
                     </div>
                   </div>
-                  <div className="text-gray-400 flex-shrink-0 ml-4">
+                  <div className="text-gray-300 flex-shrink-0 ml-4">
                     {isDefinitionExpanded ? (
                       <ChevronUp className="w-5 h-5" />
                     ) : (
