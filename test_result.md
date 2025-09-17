@@ -309,15 +309,18 @@ test_plan:
 
   - task: "bAV Page New Sections - Process Support & Benefits"
     implemented: true
-    working: "NA"
+    working: false
     file: "/app/frontend/src/components/DieBavPage.js"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Added two new sections on bAV page between challenges and 'Mehr erfahren': 1) 'Wir begleiten Sie entlang aller Prozesse - dauerhaft' with 4 placeholder cards, 2) 'Ihre Vorteile' with 4 placeholder cards. Both sections use responsive 4-column grid layout."
+        - working: false
+          agent: "testing"
+          comment: "CRITICAL ISSUE: bAV page routing not working - URL /die-bav redirects to homepage instead of showing bAV content. New sections 'Wir begleiten Sie entlang aller Prozesse - dauerhaft' and 'Ihre Vorteile' not found on either homepage or bAV page. Migrated sections (CustomerSegments, GoogleReviews) also missing. Navigation from homepage 'Video ansehen' button fails to reach bAV page. Implementation appears incomplete or not deployed properly."
 
 agent_communication:
     - agent: "main"
