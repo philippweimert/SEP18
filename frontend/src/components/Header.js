@@ -20,17 +20,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 w-full z-50 bg-white border-b border-gray-200 transition-all duration-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <header className="sticky top-0 z-50 bg-[#001F3C] border-b border-[#2a4a6b] backdrop-blur-sm">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Clean & Professional */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center transition-opacity duration-200 hover:opacity-80">
-              <span className="text-2xl font-semibold text-gray-900 tracking-tight">
-                ACENCIA
-              </span>
-            </Link>
-          </div>
+          {/* Logo */}
+          <Link to="/" className="flex items-center mr-12">
+            <div className="text-xl font-semibold text-white tracking-tight">
+              ACENCIA
+            </div>
+          </Link>
 
           {/* Navigation Links - Clean & Minimal */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -41,7 +39,7 @@ const Header = () => {
             >
               <Link 
                 to="/die-bav" 
-                className="text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-200 py-2"
+                className="text-white hover:text-orange-400 font-medium text-sm transition-colors duration-200 py-2"
               >
                 bAV
               </Link>
@@ -78,7 +76,7 @@ const Header = () => {
             >
               <Link 
                 to="/bkv" 
-                className="text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-200 py-2"
+                className="text-white hover:text-orange-400 font-medium text-sm transition-colors duration-200 py-2"
               >
                 bKV
               </Link>
@@ -90,13 +88,7 @@ const Header = () => {
                   to="/bkv/x" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
                 >
-                  bKV Option X
-                </Link>
-                <Link 
-                  to="/bkv/y" 
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
-                >
-                  bKV Option Y
+                  Für Unternehmen
                 </Link>
               </div>
             </div>
@@ -108,7 +100,7 @@ const Header = () => {
             >
               <Link 
                 to="/buv" 
-                className="text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-200 py-2"
+                className="text-white hover:text-orange-400 font-medium text-sm transition-colors duration-200 py-2"
               >
                 bUV
               </Link>
@@ -120,13 +112,7 @@ const Header = () => {
                   to="/buv/x" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
                 >
-                  bUV Option X
-                </Link>
-                <Link 
-                  to="/buv/y" 
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
-                >
-                  bUV Option Y
+                  Für Unternehmen
                 </Link>
               </div>
             </div>
@@ -138,7 +124,7 @@ const Header = () => {
             >
               <Link 
                 to="/ueber-uns" 
-                className="text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-200 py-2"
+                className="text-white hover:text-orange-400 font-medium text-sm transition-colors duration-200 py-2"
               >
                 Über uns
               </Link>
@@ -158,69 +144,68 @@ const Header = () => {
             {/* Kontakt as separate navigation item */}
             <Link 
               to="/kontakt" 
-              className="text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-200 py-2"
+              className="text-white hover:text-orange-400 font-medium text-sm transition-colors duration-200 py-2"
             >
               Kontakt
             </Link>
           </nav>
 
-          {/* Primary CTA - Professional */}
+          {/* Login Portal Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <button 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              className="hidden md:block bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
               onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
             >
               Login Portal
             </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+            
+            {/* Mobile Menu Button */}
             <button
+              className="md:hidden text-white hover:text-orange-400 transition-colors duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-gray-900 p-2 transition-colors duration-200"
+              aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation - Clean Overlay */}
-        <div className={`md:hidden transition-all duration-200 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <div className="px-6 py-4 space-y-1 bg-white border-t border-gray-200">
+        {/* Mobile Navigation */}
+        <div className={`md:hidden transition-all duration-200 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+          <div className="py-4 space-y-2 border-t border-[#2a4a6b]">
             <Link
               to="/die-bav"
-              className="block py-3 text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-150"
+              className="block py-3 text-white hover:text-orange-400 font-medium text-sm transition-colors duration-150"
               onClick={() => setIsMenuOpen(false)}
             >
               bAV
             </Link>
             <Link
               to="/bkv"
-              className="block py-3 text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-150"
+              className="block py-3 text-white hover:text-orange-400 font-medium text-sm transition-colors duration-150"
               onClick={() => setIsMenuOpen(false)}
             >
               bKV
             </Link>
             <Link
               to="/buv"
-              className="block py-3 text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-150"
+              className="block py-3 text-white hover:text-orange-400 font-medium text-sm transition-colors duration-150"
               onClick={() => setIsMenuOpen(false)}
             >
               bUV
             </Link>
             <Link
               to="/ueber-uns"
-              className="block py-3 text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-150"
+              className="block py-3 text-white hover:text-orange-400 font-medium text-sm transition-colors duration-150"
               onClick={() => setIsMenuOpen(false)}
             >
               Über uns
             </Link>
             <Link
               to="/kontakt"
-              className="block py-3 text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-150"
+              className="block py-3 text-white hover:text-orange-400 font-medium text-sm transition-colors duration-150"
               onClick={() => setIsMenuOpen(false)}
             >
               Kontakt
