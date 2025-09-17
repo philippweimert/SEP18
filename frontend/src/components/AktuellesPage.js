@@ -251,15 +251,15 @@ const AktuellesPage = () => {
           {filteredArticles.length === 0 && (
             <div className="text-center py-12">
               <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Keine Artikel gefunden</h3>
-              <p className="text-gray-600">Versuchen Sie andere Suchbegriffe oder wählen Sie eine andere Kategorie.</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Keine Artikel gefunden</h3>
+              <p className="text-gray-300">Versuchen Sie andere Suchbegriffe oder wählen Sie eine andere Kategorie.</p>
             </div>
           )}
 
           {/* Back to bAV Button */}
           <div className="text-center mt-12">
             <Link to="/die-bav">
-              <Button className="bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 px-6 py-3 rounded-lg font-medium transition-colors duration-150">
+              <Button className="bg-black/40 border border-white/20 hover:bg-black/60 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150">
                 Zurück zur bAV Übersicht
               </Button>
             </Link>
