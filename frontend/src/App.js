@@ -8,6 +8,7 @@ import ContactPage from "./components/ContactPage";
 import PrivacyPage from "./components/PrivacyPage";
 import ImprintPage from "./components/ImprintPage";
 import EmployerObligationsPage from "./components/EmployerObligationsPage";
+import GesetzlichePflichtenPage from "./components/GesetzlichePflichtenPage";
 import AktuellesPage from "./components/AktuellesPage";
 import DieBavPage from "./components/DieBavPage";
 import DieBavPageX from "./components/DieBavPageX";
