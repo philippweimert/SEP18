@@ -628,11 +628,11 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="bg-gray-50 py-16 md:py-20">
+      {/* Benefits Section - Mit alternierendem Hintergrund */}
+      <section className="py-16 md:py-20" style={{backgroundColor: '#88a9c3'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-3xl font-semibold mb-4 tracking-tight" style={{color: '#001f3d'}}>
               Ihre Vorteile
             </h2>
           </div>
