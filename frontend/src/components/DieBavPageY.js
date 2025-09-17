@@ -117,9 +117,9 @@ const DieBavPageY = () => {
       </section>
 
       {/* What is bAV */}
-      <section className="bg-gray-50 py-16 md:py-20">
+      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="bg-white rounded-lg p-8 border border-gray-200">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
                 <Users className="w-6 h-6 text-orange-600" />
