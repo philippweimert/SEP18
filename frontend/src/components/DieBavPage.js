@@ -312,7 +312,7 @@ const DieBavPage = () => {
                                   setShowVideoOverlay(false);
                                 }
                               }}
-                              className="w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-150"
+                              className="w-full bg-acencia-accent hover:bg-acencia-accent-hover text-white px-4 py-2 rounded-lg font-medium transition-colors duration-150"
                             >
                               Erneut ansehen
                             </button>
@@ -331,7 +331,7 @@ const DieBavPage = () => {
                   <div className="flex items-center justify-center h-full">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Play className="w-8 h-8 text-orange-600" />
+                        <Play className="w-8 h-8 text-acencia-accent" />
                       </div>
                       <h3 className="text-gray-900 font-medium text-base mb-2">Betriebliche Altersvorsorge einfach einrichten</h3>
                       <p className="text-gray-600 text-sm">Sehen Sie, wie ACENCIA Ihre bAV digitalisiert</p>
@@ -370,7 +370,7 @@ const DieBavPage = () => {
                 <div className="flex items-center justify-between w-full">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-6 h-6 text-orange-600" />
+                      <Shield className="w-6 h-6 text-acencia-accent" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">
@@ -399,7 +399,7 @@ const DieBavPage = () => {
                   {/* Main Definition */}
                   <div className="bg-white rounded-lg p-6 border border-gray-200">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                      <Shield className="w-5 h-5 text-orange-600 mr-2" />
+                      <Shield className="w-5 h-5 text-acencia-accent mr-2" />
                       Definition & Grundlagen
                     </h4>
                     <div className="space-y-4">
@@ -588,7 +588,7 @@ const DieBavPage = () => {
                   onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
                 >
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <div className="text-orange-600">
+                    <div className="text-acencia-accent">
                       {card.icon}
                     </div>
                   </div>
@@ -597,7 +597,7 @@ const DieBavPage = () => {
                     {card.title}
                   </h3>
                   
-                  <p className="text-sm font-medium text-orange-600 mb-3">
+                  <p className="text-sm font-medium text-acencia-accent mb-3">
                     {card.subtitle}
                   </p>
 
@@ -685,12 +685,12 @@ const DieBavPage = () => {
               >
                 <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 transition-all duration-150">
-                    <div className="text-orange-600 group-hover:text-orange-700 transition-colors duration-150">
+                    <div className="text-acencia-accent group-hover:text-acencia-accent-hover transition-colors duration-150">
                       {box.icon}
                     </div>
                   </div>
                   
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-150">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-acencia-accent transition-colors duration-150">
                     {box.title}
                   </h3>
                   
@@ -698,7 +698,7 @@ const DieBavPage = () => {
                     {box.description}
                   </p>
                   
-                  <div className="flex items-center text-orange-600 group-hover:text-orange-700 transition-colors duration-150">
+                  <div className="flex items-center text-acencia-accent group-hover:text-acencia-accent-hover transition-colors duration-150">
                     <span className="text-sm font-medium">Mehr erfahren</span>
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform duration-150" />
                   </div>
