@@ -12,15 +12,6 @@ const BkvPage = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const moreInfoBoxes = [
-    {
-      title: "Für Unternehmen",
-      description: "Entdecken Sie die Vorteile der betrieblichen Krankenversicherung als Mitarbeiterbenefit und Wettbewerbsvorteil.",
-      icon: <Building2 className="w-6 h-6" />,
-      link: "/bkv/x"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
