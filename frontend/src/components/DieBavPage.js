@@ -626,7 +626,7 @@ const DieBavPage = () => {
       <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight">
+            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Ihre Vorteile
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-normal">
