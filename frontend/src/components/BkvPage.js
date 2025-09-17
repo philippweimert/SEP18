@@ -17,40 +17,40 @@ const BkvPage = () => {
       <Header />
       
       {/* Hero Section - Same structure as bAV page */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
             {/* Left Column - 7/12 */}
             <div className="lg:col-span-7">
-              <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 leading-tight tracking-tight">
-                Wir machen <span className="text-orange-600">bKV einfach!</span>
+              <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
+                Wir machen <span className="text-acencia-accent">bKV einfach!</span>
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Gesundheitsvorsorge als Mitarbeiterbenefit - Attraktive Zusatzleistungen für Ihre Belegschaft
               </p>
 
               {/* Benefits List */}
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-base">Steuerfreie Zusatzleistungen</span>
+                  <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-base">Steuerfreie Zusatzleistungen</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-base">Erhöhte Mitarbeiterzufriedenheit</span>
+                  <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-base">Erhöhte Mitarbeiterzufriedenheit</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-base">Wettbewerbsvorteil bei der Talentgewinnung</span>
+                  <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-base">Wettbewerbsvorteil bei der Talentgewinnung</span>
                 </li>
               </ul>
 
               {/* CTA Button */}
               <div className="mb-8">
                 <Button 
-                  className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
+                  className="bg-acencia-accent hover:bg-acencia-accent-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
                   onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
                   <span>Jetzt informieren</span>
@@ -58,7 +58,7 @@ const BkvPage = () => {
                 </Button>
               </div>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-400">
                 Informationen aus dem Geschäftsbetrieb gemäß §93 HGB
               </p>
             </div>
