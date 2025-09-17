@@ -115,7 +115,7 @@ const AktuellesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
       <Header />
       
       {/* Hero Section - Same structure as main pages */}
