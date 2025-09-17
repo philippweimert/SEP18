@@ -121,29 +121,29 @@ const DieBavPageY = () => {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                <Users className="w-6 h-6 text-orange-600" />
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center mr-4">
+                <Users className="w-6 h-6 text-acencia-accent" />
               </div>
-              <h2 className="text-3xl font-semibold text-gray-900 tracking-tight">
+              <h2 className="text-3xl font-semibold text-white tracking-tight">
                 Was ist betriebliche Altersvorsorge und wie funktioniert sie?
               </h2>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-200 leading-relaxed mb-4">
                   Bei der betrieblichen Altersvorsorge (bAV) wird ein Teil Ihres Bruttogehalts für die Altersvorsorge verwendet. 
-                  Dieser Betrag wird <strong className="text-gray-900">vor</strong> der Berechnung von Steuern und Sozialabgaben abgezogen.
+                  Dieser Betrag wird <strong className="text-white">vor</strong> der Berechnung von Steuern und Sozialabgaben abgezogen.
                 </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  <strong className="text-orange-600">Das Ergebnis:</strong> Sie zahlen weniger Steuern und Sozialabgaben, 
+                <p className="text-gray-200 leading-relaxed mb-4">
+                  <strong className="text-acencia-accent">Das Ergebnis:</strong> Sie zahlen weniger Steuern und Sozialabgaben, 
                   während gleichzeitig Ihre Altersvorsorge wächst.
                 </p>
               </div>
-              <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Ihr Recht auf bAV</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Seit 2002 hat <strong className="text-gray-900">jeder Arbeitnehmer</strong> den gesetzlichen Anspruch auf 
+              <div className="bg-black/40 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-4">Ihr Recht auf bAV</h3>
+                <p className="text-gray-200 text-sm leading-relaxed">
+                  Seit 2002 hat <strong className="text-white">jeder Arbeitnehmer</strong> den gesetzlichen Anspruch auf 
                   betriebliche Altersvorsorge durch Entgeltumwandlung. Ihr Arbeitgeber ist verpflichtet, Ihnen diese 
                   Möglichkeit anzubieten.
                 </p>
