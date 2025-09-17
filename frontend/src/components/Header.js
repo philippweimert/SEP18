@@ -47,12 +47,6 @@ const Header = () => {
                 isBavDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
               }`}>
                 <Link 
-                  to="/die-bav/x" 
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
-                >
-                  Arbeitgeber (Pflichten & Chancen)
-                </Link>
-                <Link 
                   to="/die-bav/gesetzliche-pflichten" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
                 >
