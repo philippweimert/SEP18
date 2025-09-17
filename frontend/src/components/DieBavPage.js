@@ -307,13 +307,13 @@ const DieBavPage = () => {
               </div>
 
               {/* Onboarding Card */}
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <div className="bg-black/30 backdrop-blur-sm border border-green-400/30 rounded-lg p-6">
                 <div className="flex items-center space-x-2 mb-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span className="text-green-800 font-medium text-sm">0,00 € Onboarding</span>
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span className="text-green-300 font-medium text-sm">0,00 € Onboarding</span>
                 </div>
-                <p className="text-green-700 text-sm">Bis zum 01.01.2027</p>
-                <Button className="w-full mt-4 bg-white border border-green-300 text-green-800 hover:bg-green-50 text-sm py-2">
+                <p className="text-green-200 text-sm">Bis zum 01.01.2027</p>
+                <Button className="w-full mt-4 bg-green-600/70 border border-green-400/30 text-white hover:bg-green-600 text-sm py-2">
                   KOSTENFREI
                 </Button>
               </div>
