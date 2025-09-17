@@ -1,26 +1,27 @@
 <analysis>
-The previous AI engineer demonstrated strong iterative development and responsiveness to user feedback, primarily focusing on extensive UI/UX refinements and content organization. Initially tasked with architectural simplification (single Python app, no database, no lock files), this core request was explicitly paused by the user. The subsequent trajectory became a deep dive into frontend design, encompassing detailed changes to the navigation bar (from simple icons to complex SVG cards, then back to simpler text), homepage content (removal, compaction), footer elements (LinkedIn, YouTube integration), and the introduction of dynamic components like the Google Reviews section with custom animations. The engineer successfully handled numerous granular requests, adapting existing components and introducing new ones while maintaining a consistent brand aesthetic and responsiveness. The current state reflects a highly polished frontend, with the architectural refactoring pending.
+The previous AI engineer's work focused primarily on a comprehensive, iterative Apple-like UI/UX redesign of the  application. Initially, this involved extensive refinement of the homepage components: Header, Hero Section, CustomerSegments, GoogleReviews, and Footer. User feedback played a critical role, leading to immediate corrections, such as restoring the dynamic scrolling for Google Reviews and refining the Footer's aesthetic. Subsequently, the task shifted to a systematic, page-by-page application of these design guidelines across all main and subpages (bAV, bKV, bUV, Imprint, Privacy, About, Contact, Service Team, Employer Obligations). This process included significant content refactoring, re-integrating original content, and resolving technical issues like routing errors after file deletions. The work highlights a strong emphasis on consistent typography, grid systems, spacing, and a clean, professional visual identity. The latest directives involve further optimizing homepage content by removing redundant elements and migrating sections to other pages.
 </analysis>
 
 <product_requirements>
-The goal is to modernize  with a consistent, interactive design, emphasizing the corporate  color. Initially, the project aimed for a complete architectural refactor into a single Python application without a database, preparing for Render.com deployment, and removing lock files. This was paused.
-
-Subsequent requirements focused on UI/UX:
-- **Navigation**: Dynamic icons (initially small, then large SVG cards, finally compact text links), nested dropdowns, specific naming, repositioning of elements (logo, Login, Support, über uns), and ensuring zero horizontal space for dropdown arrows.
-- **Homepage**: Simplified layout, removal of introductory texts (Über 30 Jahre Expertise, Willkommen bei ACENCIA), significant compaction of sections (Hero, Key Message, Expertise Cards, Customer Segments), and integration of a new, animated Google Reviews section with 4.9-star ratings and continuous scrolling.
-- **Wir begleiten Sie... section**: Expandable content boxes with larger, bolder arrows, and removal of a mehr über Herausforderungen erfahren button.
-- **Footer**: Integration of LinkedIn and YouTube buttons with specific styling and links, and text modification.
-- **Buttons**: Removal of non-orange button from Unsicher, welche Lösung..., and text/link change for the remaining button.
+The overarching goal is to modernize  with a consistent, interactive, and professional Apple-like design, emphasizing the corporate  color. Architectural refactoring was initially requested but paused. Key UI/UX requirements included:
+- **Navigation:** Slim (64-72px) sticky header, simple text logo, grayscale links, one primary orange CTA, subtle dropdowns, and a professional full-page mobile overlay.
+- **Homepage:** Clean layout, Digital. Einfach. Modern. as the core message, an interactive Hero Section, refined service boxes (bAV, bKV, bUV), custom benefit icons, and a continuously scrolling Google Reviews section. Explicitly requested removal of badge-boxes.
+- **Video Integration:** A Video ansehen button on the homepage should navigate to the bAV page, autoplay the embedded video, and display a custom overlay upon completion. The bAV Hero section's original content must be preserved within the new design.
+- **General Design Guidelines:** Consistent max-width container (1200-1280px), 12-column grid, unified vertical rhythm (72px/48px), specific typography scaling (H1: 56/36px, Body: 16px LH 1.6, headlines 600 weight, body 400-500), consistent button styles (primary orange, secondary outline, 8px radius, 2px focus ring), 1px hairline borders instead of strong shadows, soft transitions (150-200ms ease), fluid typography, and responsive design. Content presentation should be streamlined, with clear hierarchy (H1->H2->H3) and lists.
+- **Content Reorganization:** Remove the video placeholder from the homepage, emphasizing bAV, bKV, and bUV services. Move Für jede Unternehmensgröße and Das sagen unsere Kunden sections from the Homepage to the bAV Page (append at bottom).
+- **Disclaimer Text Update:** Informationen aus dem Geschäftsbetrieb des Versicherungsmaklers gemäß §93 HGB, keine Rechtsberatung, keine Steuerberatung to Informationen aus dem Geschäftsbetrieb gemäß §93 HGB.
+- **Redundancy Avoidance:** Remove solutions cards from the bAV page.
 </product_requirements>
 
 <key_technical_concepts>
 - **React**: Frontend development with functional components.
 - **Tailwind CSS**: Utility-first styling for responsive design.
-- **React Router DOM**: Client-side routing.
-- **FastAPI**: Backend for API (though database removal was requested, not implemented).
-- **SVG**: Direct integration and manipulation for icons and graphics.
-- **CSS Animations ()**: Custom animations for scrolling reviews and star effects.
-- **Environment Variables**: For URLs.
+- **React Router DOM**: Client-side routing for navigation.
+- **FastAPI**: Python backend framework for API (largely untouched).
+- **SVG**: Direct integration for logos and icons.
+- **CSS Animations ()**: Custom animations for interactive elements (e.g., continuous scrolling).
+- **YouTube Player API**: For embedded video control and event handling.
+- **Environment Variables**: For URL configuration.
 </key_technical_concepts>
 
 <code_architecture>
@@ -28,67 +29,68 @@ Subsequent requirements focused on UI/UX:
 
 
 
-**Key Files and Changes:**
-
-- :
-    - **Importance**: FastAPI backend.
-    - **Changes**: No changes in this trajectory, but noted for its contact endpoint and (future) database removal goal.
-- :
-    - **Importance**: Static assets.
-    - **Changes**: , ,  were downloaded here (though later replaced by inline SVGs).
-- :
-    - **Importance**: Main router.
-    - **Changes**: Route for  () was removed.
-- :
-    - **Importance**: Global navigation.
-    - **Changes**: Numerous updates for navigation:
-        - Initially embedded small  icons for bAV, bKV, bUV.
-        - Replaced with large, custom SVG cards for bAV, bKV, bUV, with specific fonts and styling.
-        - Sized and positioned ACENCIA logo, bAV/bKV/bUV cards, über uns, and Login Portal repeatedly for balance.
-        - Kontakt was moved from a main navigation item to a sub-item under über uns.
-        - Added a new Support tooltip menu to the far right.
-        -  state and related logic were removed.
-        - Dropdown arrows were made  to save horizontal space.
-        - **Most recently**: SVG cards for bAV, bKV, bUV were replaced with simple text links, and the entire navigation was made significantly more compact. The Support link was moved vertically below the Login Portal button.
-- :
-    - **Importance**: Global footer.
-    - **Changes**: Added a LinkedIn button (SVG with hover effects), then a YouTube button (SVG with hover effects) next to it. Footer text under the logo was changed to Über 30 Jahren Erfahrung in der betrieblichen Altersvorsorge. einfach und digital. LinkedIn button position was adjusted from lower to upper footer.
-- :
-    - **Importance**: Hero banners.
-    - **Changes**: The Jetzt beraten lassen button was removed.
-- :
-    - **Importance**: New, streamlined landing page.
-    - **Changes**: Removed Über 30 Jahre Expertise, Willkommen bei ACENCIA, Ihre Experten für betriebliche Vorsorge texts. Underwent multiple rounds of compaction, reducing section heights, padding, margins, grid gaps, and text sizes. Integrated the new  component as the bottom-most section.
-- :
-    - **Importance**: Explains the bAV process (used on ).
-    - **Changes**: Text in boxes was made larger. Content was converted to expandable elements (only headings initially visible). mehr über Herausforderungen erfahren button was removed. Expand arrows were made larger and bolder.
-- :
-    - **Importance**: Highlights customer services.
-    - **Changes**: Made more compact. The non-orange button from the Unsicher, welche Lösung... box was removed. The remaining orange button's text was changed to Sprechen Sie uns an! and its link updated to .
--  (NEW FILE):
-    - **Importance**: Displays customer testimonials.
-    - **Changes**: Created to display 5-star Google reviews with moving elements. Populated with realistic reviews, set rating to 4.9 stars. Implemented continuous scrolling animation (), wave animations for stars (, ), and removed faulty gradient overlays.
-- :
-    - **Importance**: Global CSS.
-    - **Changes**: Added CSS  for , , and  animations for the Google Reviews section.
+-   :
+    -   **Importance**: FastAPI backend application.
+    -   **Changes**: No functional changes relevant to this trajectory.
+-   :
+    -   **Importance**: Handles main application routing.
+    -   **Changes**: Routes and imports for , , and  were removed to resolve import errors and consolidate subpages. Now correctly configured for all transformed pages.
+-   :
+    -   **Importance**: Global navigation bar.
+    -   **Changes**: Redesigned to an Apple-like style: slim (64px) sticky header, white background, simple text logo, grayscale navigation links, single orange CTA, and refined mobile navigation.
+-   :
+    -   **Importance**: Global footer.
+    -   **Changes**: Refined to match Apple-like aesthetics with a light gray background, simplified text-based logo, Apple-style social buttons, and improved typography/hierarchy.
+-   :
+    -   **Importance**: The main hero banner component of the homepage.
+    -   **Changes**: Overhauled to a clean, Apple-like design with structured 7/5 grid, clear typography, orange accents, professional buttons, and solution/onboarding cards. Currently, the video placeholder is being targeted for removal as part of content reorganization.
+-   :
+    -   **Importance**: Main landing page, integrating various sections.
+    -   **Changes**: Adapted to integrate the redesigned HeroSection, CustomerSegments, and GoogleReviews. It is currently being refactored to remove and migrate sections to .
+-   :
+    -   **Importance**: Displays customer-centric services.
+    -   **Changes**: Redesigned to Apple-like standards, including max-width container, 12-column grid, updated typography, professional icons, and Apple-style buttons.
+-   :
+    -   **Importance**: Displays customer testimonials.
+    -   **Changes**: Initially created with continuous scrolling. Later transformed to a static grid, then reverted to a continuous assembly line scrolling animation with Apple-like card designs, orange stars, more reviews, and the Alle Bewertungen auf Google ansehen button removed.
+-   :
+    -   **Importance**: Dedicated page for bAV information and video integration.
+    -   **Changes**: Extensively redesigned multiple times to meet Apple-like guidelines, restoring specific original content for its Hero section, re-integrating video functionality with autoplay and overlay, removing redundant solution cards, and updating the disclaimer text. Now serves as the target for content migration from the homepage.
+-   , , :
+    -   **Importance**: Subpages for bAV (For Companies, For Employees, News).
+    -   **Changes**: All three were fully transformed to the consistent Apple-like design, preserving their specific content and functionality (e.g., search/filter on AktuellesPage).
+-   , :
+    -   **Importance**: Main bKV page and its subpage.
+    -   **Changes**: Transformed to the Apple-like design.  was deleted, and  updated accordingly.
+-   , :
+    -   **Importance**: Main bUV page and its subpage.
+    -   **Changes**: Transformed to the Apple-like design.  was deleted, and  updated accordingly.
+-   , , , , , :
+    -   **Importance**: Various other content and information pages.
+    -   **Changes**: All these pages were fully transformed to adhere to the consistent Apple-like design principles.
+-   :
+    -   **Importance**: Global CSS for Tailwind and custom styles.
+    -   **Changes**: Contains  for the continuous scrolling animation used in the Google Reviews section, alongside other global styles for the new design.
 </code_architecture>
 
 <pending_tasks>
-- **Architectural Simplification**: Refactor the entire application to be a single Python application (serving frontend from backend), without a database (remove MongoDB), and without lock files (yarn.lock, package.json), suitable for deployment on Render.com.
-- **Color Palette Adjustment**: Further nuanced global adjustment of the orange palette.
-- **Cost-Neutral Model Page**: Create a new sub-page.
-- **True Partner Login Portal**: Develop a functional customer area.
-- **Video Integration**: Decision on more custom or dynamic video elements beyond the current YouTube embed.
+-   **Architectural Simplification**: Refactor to a single Python application without a database (MongoDB removal) and without lock files, suitable for Render.com deployment (explicitly paused).
+-   **Color Palette Adjustment**: Further nuanced global adjustment of the orange palette.
+-   **Cost-Neutral Model Page**: Create a new sub-page.
+-   **True Partner Login Portal**: Develop a functional customer area.
+-   **Video Integration**: Decision on more custom or dynamic video elements beyond the current YouTube embed (future enhancement).
+-   **Homepage Content Refactoring**: Remove video placeholder and emphasize bAV, bKV, bUV services.
+-   **Content Migration**: Move Für jede Unternehmensgröße and Das sagen unsere Kunden sections from the Homepage to the bAV Page (append at bottom).
 </pending_tasks>
 
 <current_work>
-Immediately before this summary, the AI engineer had just completed a significant phase of UI/UX improvements. The latest sequence of tasks involved:
-1.  **Reverting Navigation to Text**: The large SVG card-based navigation for bAV, bKV, bUV was replaced with simple text links (e.g., bAV, bKV, bUV).
-2.  **Compacting Navigation Bar**: The overall height of the navigation bar was reduced from  to .
-3.  **Restructuring Right-Side Navigation**: The Login Portal (orange button) and the Support link were repositioned to the far right, with the Support link now appearing vertically below the Login Portal button, and styled to be smaller.
-These changes were applied to both desktop and mobile navigation. The goal was to achieve a more compact, streamlined, and professional-looking navigation bar with clear text labels, ensuring more space for the page content. The AI confirmed the successful implementation and visual consistency via screenshots.
+Immediately before this summary request, the AI engineer was engaged in further refining the homepage's content and structure. The entire website had just undergone a complete transformation to a consistent Apple-like design, with all main and subpages having been updated. The specific tasks currently in progress are:
+1.  **Removing Video Placeholder from Homepage**: The user requested the video placeholder on the homepage be removed ().
+2.  **Emphasizing Core Services on Homepage**: Following the removal of the video placeholder, the instruction is to highlight the bAV, bKV, and bUV services more prominently on the homepage.
+3.  **Migrating Homepage Sections**: The user explicitly requested moving the Für jede Unternehmensgröße and Das sagen unsere Kunden sections from  to , appending them to the bottom of the bAV page.
+The AI engineer has acknowledged these tasks and has just initiated the process, starting with the content refactoring from the homepage.
 </current_work>
 
 <optional_next_step>
-The next step is to address any further user feedback on the current, recently implemented, compact text-based navigation.
+Remove the Für jede Unternehmensgröße and Das sagen unsere Kunden sections from the Homepage.
 </optional_next_step>
