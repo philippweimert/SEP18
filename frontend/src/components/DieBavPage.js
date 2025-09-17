@@ -529,17 +529,9 @@ const DieBavPage = () => {
             {processSupportCards.map((card, index) => (
               <div 
                 key={index} 
-                className="rounded-3xl border border-gray-200 hover:border-gray-300 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-105"
+                className="bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 transition-all duration-500 cursor-pointer group hover:-translate-y-1 hover:scale-105"
                 style={{
-                  background: 'linear-gradient(145deg, #0b2a3d 0%, #0a2637 100%)',
-                  boxShadow: '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)',
                   borderRadius: '24px'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(11,42,61,.2), 0 8px 16px rgba(11,42,61,.12), 0 0 0 1px rgba(236,210,184,.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)';
                 }}
               >
                 {/* Collapsed State */}
