@@ -218,6 +218,13 @@ const Header = () => {
             >
               Über uns
             </Link>
+            <Link
+              to="/kontakt"
+              className="block py-3 text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-150"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Kontakt
+            </Link>
             
             <div className="pt-4">
               <button 
