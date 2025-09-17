@@ -65,7 +65,7 @@ const CustomerSegments = () => {
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
             Für jede Unternehmensgröße
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-normal">
