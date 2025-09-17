@@ -387,7 +387,7 @@ const DieBavPage = () => {
 
                       <div className="mt-4">
                         <button
-                          onClick={() => window.open('/bav-rechtliche-grundlagen', '_blank')}
+                          onClick={() => window.location.href = '/die-bav/gesetzliche-pflichten'}
                           className="inline-flex items-center px-4 py-2 bg-acencia-accent/70 hover:bg-acencia-accent text-white text-xs font-medium rounded-lg transition-colors duration-150"
                         >
                           <Shield className="w-3 h-3 mr-1" />
