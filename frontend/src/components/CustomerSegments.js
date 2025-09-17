@@ -24,15 +24,15 @@ const CustomerSegments = () => {
   ];
 
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
       {/* Apple-like Container: Max-width 1200px with proper padding */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         {/* Apple-like Header with proper typography hierarchy */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6 tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight">
             Für jede Unternehmensgröße
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-normal">
             Maßgeschneiderte bAV-Lösungen, die mit Ihrem Unternehmen wachsen
           </p>
         </div>
