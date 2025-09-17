@@ -72,30 +72,22 @@ const GoogleReviews = () => {
   return (
     <section className="py-20 md:py-24 overflow-hidden" style={{backgroundColor: '#001f3d'}}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-8">
-        {/* Premium Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl mb-6">
-            <Quote className="w-8 h-8 text-acencia-accent" />
-          </div>
-          
+        {/* Simple Header */}
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold mb-4 text-white tracking-tight">
             Das sagen unsere Kunden
           </h2>
           
-          <div className="flex items-center justify-center space-x-4 mb-8">
+          <div className="flex items-center justify-center space-x-4 mb-6">
             <div className="flex items-center space-x-1">
               {[1,2,3,4,5].map((star) => (
-                <Star key={star} className="w-6 h-6 text-acencia-accent fill-acencia-accent" />
+                <Star key={star} className="w-5 h-5 text-acencia-accent fill-acencia-accent" />
               ))}
             </div>
-            <div className="h-6 w-px bg-white/20"></div>
-            <span className="text-white font-semibold text-xl">4.9</span>
-            <span className="text-gray-300 text-lg">aus 100+ Bewertungen</span>
+            <div className="h-4 w-px bg-white/20"></div>
+            <span className="text-white font-semibold text-lg">4.9</span>
+            <span className="text-gray-300 text-base">aus 100+ Bewertungen</span>
           </div>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Vertrauen Sie auf die Erfahrungen zufriedener Unternehmen
-          </p>
         </div>
 
         {/* Compact Testimonial Slider */}
