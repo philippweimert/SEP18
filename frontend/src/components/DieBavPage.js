@@ -568,10 +568,8 @@ const DieBavPage = () => {
                 key={index}
                 className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-green-600">
-                    {card.icon}
-                  </div>
+                <div className="flex justify-center mb-4">
+                  {card.icon}
                 </div>
                 
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
