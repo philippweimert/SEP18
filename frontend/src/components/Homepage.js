@@ -34,15 +34,15 @@ const Homepage = () => {
 
   const benefits = [
     {
-      text: "Über 30 Jahre Erfahrung",
-      icon: <Trophy className="w-4 h-4" />
-    },
-    {
       text: "DSGVO konform & Rechtssicher",
       icon: <Shield className="w-4 h-4" />
     },
     {
-      text: "Individuelle Lösungen für jede Unternehmensgröße",
+      text: "Digital & Automatisiert",
+      icon: <Zap className="w-4 h-4" />
+    },
+    {
+      text: "Individuell & Skalierbar",
       icon: <Building className="w-4 h-4" />
     }
   ];
