@@ -50,7 +50,7 @@ const Header = () => {
                   to="/die-bav/gesetzliche-pflichten" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
                 >
-                  Gesetzliche Pflichten
+                  Rechtlicher Rahmen
                 </Link>
                 <Link 
                   to="/die-bav/y" 
