@@ -13,10 +13,12 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		fontFamily: {
+  			'tenor': ['Tenor Sans', 'serif'],
+  			'opensans': ['Open Sans', 'sans-serif'],
   			inter: ['Open Sans', 'system-ui', 'sans-serif'],
-  			display: ['Open Sans', 'system-ui', 'sans-serif'],
+  			display: ['Tenor Sans', 'serif'],
   			sans: ['Open Sans', 'system-ui', 'sans-serif'],
-  			heading: ['Open Sans', 'system-ui', 'sans-serif'],
+  			heading: ['Tenor Sans', 'serif'],
   			body: ['Open Sans', 'system-ui', 'sans-serif'],
   		},
   		fontSize: {
