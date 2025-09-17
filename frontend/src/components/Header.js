@@ -52,13 +52,13 @@ const Header = () => {
                   to="/die-bav/x" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
                 >
-                  Für Unternehmen
+                  Arbeitgeber (Pflichten & Chancen)
                 </Link>
                 <Link 
                   to="/die-bav/y" 
                   className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
                 >
-                  Für Arbeitnehmer
+                  Vorteile Arbeitnehmer
                 </Link>
                 <Link 
                   to="/die-bav/aktuelles" 
