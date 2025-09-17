@@ -363,6 +363,16 @@ const GesetzlichePflichtenPage = () => {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-8">
+            <Button 
+              className="bg-acencia-accent/70 hover:bg-acencia-accent text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center space-x-2 mx-auto"
+              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+            >
+              <Calendar className="w-4 h-4" />
+              <span>Pflichten erfüllen - Kostenloses Erstgespräch buchen</span>
+            </Button>
+          </div>
         </div>
       </section>
 
