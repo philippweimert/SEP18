@@ -368,29 +368,21 @@ const DieBavPage = () => {
                       <Shield className="w-5 h-5 text-acencia-accent mr-2" />
                       Definition & Grundlagen
                     </h4>
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Die betriebliche Altersvorsorge (bAV) ist eine zentrale Säule der Altersvorsorge in Deutschland und stellt neben der gesetzlichen Rente und der privaten Vorsorge die zweite Säule des Drei-Säulen-Systems dar. Sie wird über den Arbeitgeber organisiert und bietet sowohl Arbeitnehmern als auch Arbeitgebern erhebliche Vorteile.
+                        Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. Sie ergänzt die gesetzliche Rente und bildet die zweite Säule des deutschen Drei-Säulen-Systems.
                       </p>
                       
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Das Grundprinzip der Entgeltumwandlung ermöglicht es Arbeitnehmern, einen Teil ihres Bruttogehalts für die Altersvorsorge zu verwenden. Dadurch reduzieren sich sowohl die Steuer- als auch die Sozialabgabenlast während der Erwerbsphase. Der umgewandelte Betrag wird in einen Versicherungsvertrag eingezahlt und später als Rente oder Kapitalleistung ausgezahlt.
+                        Bei der Entgeltumwandlung wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet. Dadurch reduzieren sich Steuern und Sozialabgaben während der Erwerbsphase, was sowohl Arbeitnehmer als auch Arbeitgeber finanziell entlastet.
                       </p>
 
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Die bAV kann über verschiedene Durchführungswege realisiert werden: Direktversicherung, Pensionskasse, Pensionsfonds, Direktzusage oder Unterstützungskasse. Jeder Durchführungsweg hat spezifische Eigenschaften bezüglich Steuerbehandlung, Insolvenzschutz und Portabilität.
+                        Seit 2002 haben alle Arbeitnehmer einen gesetzlichen Anspruch auf Entgeltumwandlung. Arbeitgeber müssen mindestens 15% Zuschuss leisten, wenn sie durch die Entgeltumwandlung Sozialversicherungsbeiträge sparen.
                       </p>
 
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Seit 2002 haben alle Arbeitnehmer einen gesetzlichen Anspruch auf Entgeltumwandlung. Der Arbeitgeber ist verpflichtet, mindestens 15% Zuschuss zu leisten, wenn er durch die Entgeltumwandlung Sozialversicherungsbeiträge spart. Diese Regelung stärkt die Position der Arbeitnehmer und macht die bAV noch attraktiver.
-                      </p>
-
-                      <p className="text-gray-200 leading-relaxed text-sm">
-                        Moderne bAV-Lösungen sind digital, automatisiert und rechtssicher. Sie entlasten die Personalabteilung erheblich und bieten gleichzeitig eine hohe Transparenz für alle Beteiligten. Die komplexe Verwaltung wird durch spezialisierte Anbieter übernommen, wodurch Unternehmen sich auf ihr Kerngeschäft konzentrieren können.
-                      </p>
-
-                      <p className="text-gray-200 leading-relaxed text-sm">
-                        Die bAV ist nicht nur ein wichtiger Baustein der Altersvorsorge, sondern auch ein wertvolles Instrument zur Mitarbeiterbindung und -gewinnung. In Zeiten des Fachkräftemangels wird sie zu einem entscheidenden Wettbewerbsvorteil für Unternehmen aller Größenordnungen.
+                        Moderne bAV-Lösungen sind digital und automatisiert. Sie entlasten die Personalabteilung und schaffen Transparenz für alle Beteiligten, während sie gleichzeitig als wichtiges Instrument zur Mitarbeiterbindung dienen.
                       </p>
                     </div>
                   </div>
