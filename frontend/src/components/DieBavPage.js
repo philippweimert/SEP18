@@ -374,15 +374,11 @@ const DieBavPage = () => {
                       </p>
                       
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Bei der Entgeltumwandlung wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet. Dadurch reduzieren sich Steuern und Sozialabgaben während der Erwerbsphase, was sowohl Arbeitnehmer als auch Arbeitgeber finanziell entlastet.
+                        Bei der Entgeltumwandlung wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet. Dadurch reduzieren sich Steuern und Sozialabgaben für beide Parteien.
                       </p>
 
                       <p className="text-gray-200 leading-relaxed text-sm">
-                        Seit 2002 haben alle Arbeitnehmer einen gesetzlichen Anspruch auf Entgeltumwandlung. Arbeitgeber müssen mindestens 15% Zuschuss leisten, wenn sie durch die Entgeltumwandlung Sozialversicherungsbeiträge sparen.
-                      </p>
-
-                      <p className="text-gray-200 leading-relaxed text-sm">
-                        Moderne bAV-Lösungen sind digital und automatisiert. Sie entlasten die Personalabteilung und schaffen Transparenz für alle Beteiligten, während sie gleichzeitig als wichtiges Instrument zur Mitarbeiterbindung dienen.
+                        Seit 2002 haben alle Arbeitnehmer einen gesetzlichen Anspruch auf Entgeltumwandlung. Moderne bAV-Lösungen sind digital, automatisiert und entlasten die Personalabteilung erheblich.
                       </p>
                     </div>
                   </div>
