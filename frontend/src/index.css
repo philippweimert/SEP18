@@ -67,37 +67,49 @@ body {
     font-size: var(--text-body-min);
 }
 
-/* Typography System */
+/* Typografie-System mit neuen Größen */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Tenor Sans', serif;
+    font-family: var(--font-display);
     font-weight: 400;
     line-height: 1.2;
+    letter-spacing: -0.01em;
 }
 
-.font-heading {
-    font-family: 'Tenor Sans', serif;
+/* Responsive Typografie */
+h1 { 
+    font-family: var(--font-display); 
+    font-size: clamp(var(--text-h1-min), 4vw, var(--text-h1-max));
+    font-weight: 500;
+}
+h2 { 
+    font-family: var(--font-display); 
+    font-size: clamp(var(--text-h2-min), 3vw, var(--text-h2-max));
+}
+h3 { 
+    font-family: var(--font-display); 
+    font-size: clamp(var(--text-h3-min), 2.5vw, var(--text-h3-max));
+}
+h4 { 
+    font-family: var(--font-display); 
+    font-size: clamp(var(--text-h4-min), 2vw, var(--text-h4-max));
+}
+h5, h6 { 
+    font-family: var(--font-display); 
+    font-size: 18px;
 }
 
-.font-body {
-    font-family: 'Open Sans', sans-serif;
+/* Body Text mit verbesserter Zeilenhöhe */
+p, .text-body {
+  font-size: clamp(var(--text-body-min), 1.5vw, var(--text-body-max));
+  line-height: 1.6;
+  font-family: var(--font-body);
 }
 
-/* Apply Tenor Sans to all headings globally */
-h1 { font-family: 'Tenor Sans', serif; }
-h2 { font-family: 'Tenor Sans', serif; }
-h3 { font-family: 'Tenor Sans', serif; }
-h4 { font-family: 'Tenor Sans', serif; }
-h5 { font-family: 'Tenor Sans', serif; }
-h6 { font-family: 'Tenor Sans', serif; }
-
-/* Override for elements that should use Tenor Sans */
-.text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
-    font-family: 'Tenor Sans', serif;
-}
-
-/* Ensure Open Sans for UI elements */
-button, input, select, textarea, .btn, .nav, .form-control {
-    font-family: 'Open Sans', sans-serif;
+/* Caption/Meta Text */
+.text-caption, .text-meta {
+  font-size: clamp(var(--text-caption-min), 1.2vw, var(--text-caption-max));
+  line-height: 1.4;
+  font-family: var(--font-body);
 }
 
 code {
