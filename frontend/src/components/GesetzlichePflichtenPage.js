@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
-import { Scale, AlertTriangle, CheckCircle, FileText, Users, ArrowRight, Calendar } from "lucide-react";
+import { Scale, AlertTriangle, CheckCircle, FileText, Users, ArrowRight, Calendar, Building2 } from "lucide-react";
 
 const GesetzlichePflichtenPage = () => {
   const obligations = [
