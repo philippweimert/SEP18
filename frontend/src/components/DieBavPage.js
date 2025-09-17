@@ -256,15 +256,11 @@ const DieBavPage = () => {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-base">100% digitale Verwaltung</span>
+                  <span className="text-gray-700 text-base">DSGVO konform & Rechtssicher</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-base">Vollautomatisierte Prozesse</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-base">DSGVO-konform & rechtssicher</span>
+                  <span className="text-gray-700 text-base">Digital & Automatisiert</span>
                 </li>
               </ul>
 
