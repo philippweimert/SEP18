@@ -32,7 +32,7 @@ function App() {
           <Route path="/die-bav/x" element={<DieBavPageX />} />
           <Route path="/die-bav/y" element={<DieBavPageY />} />
           <Route path="/die-bav/aktuelles" element={<AktuellesPage />} />
-          <Route path="/die-bav/gesetzliche-pflichten" element={<EmployerObligationsPage />} />
+          <Route path="/die-bav/gesetzliche-pflichten" element={<GesetzlichePflichtenPage />} />
           <Route path="/bkv" element={<BkvPage />} />
           <Route path="/bkv/x" element={<BkvPageX />} />
           <Route path="/buv" element={<BuvPage />} />
