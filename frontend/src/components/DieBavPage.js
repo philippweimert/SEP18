@@ -124,27 +124,6 @@ const DieBavPage = () => {
     }
   ];
 
-  const moreInfoBoxes = [
-    {
-      title: "Für Unternehmen",
-      description: "Alles Wichtige über Pflichten, Herausforderungen, Chancen und Vorteile der bAV für Arbeitgeber.",
-      icon: <Building2 className="w-6 h-6" />,
-      link: "/die-bav/x"
-    },
-    {
-      title: "Für Arbeitnehmer", 
-      description: "Erfahren Sie, wie Sie von steuerlichen Vorteilen profitieren und Ihre Altersvorsorge optimieren.",
-      icon: <Users className="w-6 h-6" />,
-      link: "/die-bav/y"
-    },
-    {
-      title: "Aktuelles",
-      description: "Bleiben Sie informiert über die neuesten Entwicklungen, Gesetze und Trends in der bAV.",
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: "/die-bav/aktuelles"
-    }
-  ];
-
   const processSupportCards = [
     {
       title: "Rechtliche Prüfung & Einrichtung der bAV",
