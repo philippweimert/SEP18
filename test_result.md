@@ -326,6 +326,30 @@ test_plan:
           agent: "testing"
           comment: "COMPREHENSIVE COLLAPSIBLE CARDS TESTING COMPLETED: ✅ bAV page accessible via 'Video ansehen' button navigation (URL: /die-bav?autoplay=true). ✅ 'Wir begleiten Sie entlang aller Prozesse - dauerhaft' section found with all 4 process cards present: 'Rechtliche Prüfung & Einrichtung der bAV', 'Digitale Verwaltung & laufender Support', 'Mitarbeiterkommunikation & (digitale) Beratung', 'Steuervorteile & Kostenoptimierung'. ✅ All cards expand correctly showing full descriptions with border separator. ✅ Cards show titles and subtitles when collapsed. ⚠️ Minor: Multiple cards can be expanded simultaneously (not exclusive expansion). ⚠️ Minor: Cards don't collapse when clicked again (toggle functionality). Core collapsible functionality working correctly - cards expand and show content as requested."
 
+  - task: "Navigation Structure Updates - bAV Dropdown Rename & bKV/bUV Simplification"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Header.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "NAVIGATION STRUCTURE TESTING COMPLETED: ✅ bAV dropdown functionality verified - correctly shows renamed options: 'Arbeitgeber (Pflichten & Chancen)', 'Vorteile Arbeitnehmer', and 'Aktuelles'. ✅ bKV and bUV confirmed as simple navigation links WITHOUT dropdown menus (dropdown visible: false for both). ✅ All navigation links functional and clickable. Navigation structure changes successfully implemented and working correctly."
+
+  - task: "Page Content Cleanup - Remove Sections from bKV and bUV Pages"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/BkvPage.js, /app/frontend/src/components/BuvPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "PAGE CONTENT CLEANUP TESTING COMPLETED: ✅ bKV page content verification: 'Inhalte folgen in Kürze' and 'Mehr erfahren' sections successfully removed - page now ends with main content and footer (2 sections total). ✅ bUV page content verification: 'Inhalte folgen in Kürze' and 'Mehr erfahren' sections successfully removed - page now ends with main content and footer (2 sections total). ✅ Page structure confirmed: Both bKV and bUV pages are significantly shorter without the removed sections. Content cleanup successfully implemented."
+
 agent_communication:
     - agent: "main"
       message: "Successfully completed major homepage restructuring: Replaced entire InteractiveMainSections with simplified challenges/solutions display, added new 3-step process section below Hero with requested text, and removed all Demo buchen buttons. All changes working correctly as verified by screenshots."
