@@ -248,7 +248,7 @@ test_plan:
           comment: "Successfully integrated bAV, bKV, and bUV icons into both desktop and mobile navigation. Icons downloaded to public directory and added to navigation links with proper sizing (h-6 for desktop, h-5 for mobile). Adjusted navigation spacing from space-x-6 to space-x-8 to accommodate icons. All icons display correctly with proper alignment."
 
   - task: "Homepage Content Migration - Remove Sections"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "/app/frontend/src/components/Homepage.js"
     stuck_count: 0
@@ -257,10 +257,10 @@ test_plan:
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Need to remove CustomerSegments and GoogleReviews components from Homepage.js to migrate them to DieBavPage.js"
+          comment: "Successfully removed CustomerSegments and GoogleReviews components from Homepage.js imports and JSX. Also removed video placeholder section as requested."
 
   - task: "bAV Page Content Migration - Add Sections"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "/app/frontend/src/components/DieBavPage.js"
     stuck_count: 0
@@ -269,7 +269,7 @@ test_plan:
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Need to add CustomerSegments and GoogleReviews components to DieBavPage.js at the bottom of the page"
+          comment: "Successfully added CustomerSegments and GoogleReviews components to DieBavPage.js at the bottom of the page, just before Footer. Added necessary imports."
 
 agent_communication:
     - agent: "main"
