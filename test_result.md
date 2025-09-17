@@ -277,6 +277,30 @@ test_plan:
           agent: "testing"
           comment: "COMPREHENSIVE TESTING COMPLETED: ✅ 'Für jede Unternehmensgröße' (CustomerSegments) section successfully migrated to bAV page with all three cards (Start-up, Mittelstand, Konzern) displaying correctly. ✅ 'Das sagen unsere Kunden' (GoogleReviews) section successfully migrated to bAV page with 4.9 rating, customer testimonials, and scrolling animation working. ✅ All 3 'Beratung vereinbaren' buttons functional and clickable. ✅ Responsive design working - both sections display correctly on mobile. ✅ Continuous scrolling animation for Google reviews working properly. Content migration to bAV page completed successfully."
 
+  - task: "Homepage Hero Benefits Update"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/Homepage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Updated homepage hero section benefits to: 'DSGVO konform & Rechtssicher', 'Digital & Automatisiert', 'Individuell & Skalierbar' as requested by user."
+
+  - task: "bAV Page Definition Section - Expandable with Legal Warning"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/components/DieBavPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Converted 'Was ist betriebliche Altersvorsorge?' section to expandable element and added red visual warning alert for legal claim about 'Rechtsanspruch auf Entgeltumwandlung' as requested by user."
+
 agent_communication:
     - agent: "main"
       message: "Successfully completed major homepage restructuring: Replaced entire InteractiveMainSections with simplified challenges/solutions display, added new 3-step process section below Hero with requested text, and removed all Demo buchen buttons. All changes working correctly as verified by screenshots."
@@ -300,3 +324,5 @@ agent_communication:
       message: "STARTING HOMEPAGE CONTENT MIGRATION: User requested to move 'Für jede Unternehmensgröße' (CustomerSegments component) and 'Das sagen unsere Kunden' (GoogleReviews component) sections from Homepage to DieBavPage.js without changes. These sections will be appended at the bottom of the bAV page and removed from homepage. Implementation starting now."
     - agent: "testing"
       message: "HOMEPAGE CONTENT MIGRATION TESTING COMPLETED: ✅ HOMEPAGE VERIFICATION: Video placeholder successfully removed, 'Das sagen unsere Kunden' section successfully removed, core services (bAV, bKV, bUV) still prominently displayed, 'Video ansehen' button works and navigates to bAV page. ✅ bAV PAGE VERIFICATION: Both migrated sections ('Für jede Unternehmensgröße' and 'Das sagen unsere Kunden') successfully appear at bottom of bAV page with full functionality - customer segment cards with working 'Beratung vereinbaren' buttons, Google reviews with 4.9 rating and scrolling animation. ✅ RESPONSIVE DESIGN: Both sections work correctly on mobile. ✅ NAVIGATION: All links and functionality preserved. Content migration completed successfully with no broken components or missing functionality."
+    - agent: "main"
+      message: "HOMEPAGE HERO BENEFITS & bAV DEFINITION SECTION UPDATES COMPLETED: ✅ Updated homepage hero benefits to requested: 'DSGVO konform & Rechtssicher', 'Digital & Automatisiert', 'Individuell & Skalierbar'. ✅ Converted bAV page 'Was ist betriebliche Altersvorsorge?' section to expandable element with red warning alert highlighting the legal claim 'Rechtsanspruch auf Entgeltumwandlung'. Both implementations verified via screenshots showing correct display and functionality."
