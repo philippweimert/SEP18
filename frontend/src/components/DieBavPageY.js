@@ -72,17 +72,17 @@ const DieBavPageY = () => {
       <Header />
       
       {/* Hero Section - Same structure as main pages */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 leading-tight tracking-tight">
-              <span className="text-orange-600">Sicherheit</span> für später –<br />
+            <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
+              <span className="text-acencia-accent">Sicherheit</span> für später –<br />
               heute schon profitieren
             </h1>
-            <p className="text-xl text-gray-600 mb-4 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-4 leading-relaxed">
               Was bleibt am Ende des Berufslebens?
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-400">
               Informationen aus dem Geschäftsbetrieb gemäß §93 HGB
             </p>
           </div>
