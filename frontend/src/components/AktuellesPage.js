@@ -119,16 +119,16 @@ const AktuellesPage = () => {
       <Header />
       
       {/* Hero Section - Same structure as main pages */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 mb-6 leading-tight tracking-tight">
-              Aktuelles zur <span className="text-orange-600">bAV</span>
+            <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
+              Aktuelles zur <span className="text-acencia-accent">bAV</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-4 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-4 leading-relaxed">
               Bleiben Sie informiert über die neuesten Entwicklungen, Gesetze und Trends in der bAV
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-400">
               Informationen aus dem Geschäftsbetrieb gemäß §93 HGB
             </p>
           </div>
@@ -136,7 +136,7 @@ const AktuellesPage = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="bg-gray-50 py-16 md:py-20">
+      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="bg-white rounded-lg p-8 border border-gray-200 mb-12">
             <div className="flex flex-col md:flex-row gap-6 items-center">
