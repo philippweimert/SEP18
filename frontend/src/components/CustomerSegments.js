@@ -46,7 +46,7 @@ const CustomerSegments = () => {
             >
               {/* Apple-like Icon Design */}
               <div className="w-14 h-14 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:from-orange-100 group-hover:to-orange-200 transition-all duration-150">
-                <div className="text-orange-600 group-hover:text-orange-700 transition-colors duration-150">
+                <div className="text-acencia-accent group-hover:text-acencia-accent-hover transition-colors duration-150">
                   {segment.icon}
                 </div>
               </div>
