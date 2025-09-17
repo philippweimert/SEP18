@@ -567,19 +567,7 @@ const DieBavPage = () => {
                   className="p-6 flex flex-col items-center text-center"
                   onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
                 >
-                  <div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-all duration-300"
-                    style={{
-                      background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
-                      boxShadow: 'inset 0 2px 4px rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.08)'
-                    }}
-                  >
-                    <div style={{ color: '#0b2a3d' }}>
-                      {card.icon}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-lg font-semibold text-white mb-4">
                     {card.title}
                   </h3>
                   
