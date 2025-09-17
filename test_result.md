@@ -249,27 +249,33 @@ test_plan:
 
   - task: "Homepage Content Migration - Remove Sections"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/Homepage.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Successfully removed CustomerSegments and GoogleReviews components from Homepage.js imports and JSX. Also removed video placeholder section as requested."
+        - working: true
+          agent: "testing"
+          comment: "COMPREHENSIVE TESTING COMPLETED: ✅ Video placeholder successfully removed from homepage - no video/iframe elements found. ✅ 'Das sagen unsere Kunden' (Google reviews) section successfully removed from homepage. ✅ Core services (bAV, bKV, bUV) still prominently displayed with 'Unsere Lösungen' section intact. ✅ 'Video ansehen' button works correctly and navigates to bAV page. Content migration from homepage completed successfully."
 
   - task: "bAV Page Content Migration - Add Sections"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/DieBavPage.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Successfully added CustomerSegments and GoogleReviews components to DieBavPage.js at the bottom of the page, just before Footer. Added necessary imports."
+        - working: true
+          agent: "testing"
+          comment: "COMPREHENSIVE TESTING COMPLETED: ✅ 'Für jede Unternehmensgröße' (CustomerSegments) section successfully migrated to bAV page with all three cards (Start-up, Mittelstand, Konzern) displaying correctly. ✅ 'Das sagen unsere Kunden' (GoogleReviews) section successfully migrated to bAV page with 4.9 rating, customer testimonials, and scrolling animation working. ✅ All 3 'Beratung vereinbaren' buttons functional and clickable. ✅ Responsive design working - both sections display correctly on mobile. ✅ Continuous scrolling animation for Google reviews working properly. Content migration to bAV page completed successfully."
 
 agent_communication:
     - agent: "main"
