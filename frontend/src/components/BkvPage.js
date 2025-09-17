@@ -66,22 +66,22 @@ const BkvPage = () => {
             {/* Right Column - 5/12 */}
             <div className="lg:col-span-5">
               {/* Info Placeholder */}
-              <div className="bg-gray-100 rounded-lg p-8 mb-8 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-orange-600" />
+              <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 mb-8 text-center border border-white/10">
+                <div className="w-16 h-16 bg-gradient-to-br from-gray-600 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-acencia-accent" />
                 </div>
-                <h3 className="text-gray-900 font-medium text-base mb-2">Betriebliche Krankenversicherung</h3>
-                <p className="text-gray-600 text-sm">Gesundheitsvorsorge für Ihre Mitarbeiter</p>
+                <h3 className="text-white font-medium text-base mb-2">Betriebliche Krankenversicherung</h3>
+                <p className="text-gray-300 text-sm">Gesundheitsvorsorge für Ihre Mitarbeiter</p>
               </div>
 
               {/* Onboarding Card */}
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <div className="bg-black/30 backdrop-blur-sm border border-green-400/30 rounded-lg p-6">
                 <div className="flex items-center space-x-2 mb-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span className="text-green-800 font-medium text-sm">Kostenlose Beratung</span>
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span className="text-green-300 font-medium text-sm">Kostenlose Beratung</span>
                 </div>
-                <p className="text-green-700 text-sm">Unverbindliche Erstberatung</p>
-                <Button className="w-full mt-4 bg-white border border-green-300 text-green-800 hover:bg-green-50 text-sm py-2">
+                <p className="text-green-200 text-sm">Unverbindliche Erstberatung</p>
+                <Button className="w-full mt-4 bg-green-600/70 border border-green-400/30 text-white hover:bg-green-600 text-sm py-2">
                   KOSTENFREI
                 </Button>
               </div>
