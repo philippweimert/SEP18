@@ -455,21 +455,27 @@ const DieBavPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((index) => (
+            {processSupportCards.map((card, index) => (
               <div 
                 key={index}
                 className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full"
               >
-                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 bg-gray-300 rounded"></div>
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="text-orange-600">
+                    {card.icon}
+                  </div>
                 </div>
                 
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Platzhalter {index}
+                  {card.title}
                 </h3>
                 
+                <p className="text-sm font-medium text-orange-600 mb-3">
+                  {card.subtitle}
+                </p>
+                
                 <p className="text-gray-600 leading-relaxed text-sm">
-                  Hier wird später der Inhalt für Karte {index} eingefügt.
+                  {card.description}
                 </p>
               </div>
             ))}
