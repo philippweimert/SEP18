@@ -181,7 +181,7 @@ const AktuellesPage = () => {
                 rel={article.url !== '#' ? 'noopener noreferrer' : ''}
                 className="block group"
               >
-                <article className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-gray-300 hover:shadow-sm transition-all duration-150 h-full">
+                <article className="bg-black/30 backdrop-blur-sm rounded-lg border border-white/10 overflow-hidden hover:bg-black/40 transition-all duration-150 h-full">
                   <div className="aspect-w-16 aspect-h-9">
                     <img 
                       src={article.image} 
