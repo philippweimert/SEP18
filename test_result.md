@@ -384,7 +384,7 @@ test_plan:
     status_history:
         - working: true
           agent: "main"
-          comment: "FINAL COLOR SCHEME CONSISTENCY ACHIEVED: ✅ Reviewed all pages - DieBavPage, BkvPage, BuvPage, AboutPage, ContactPage, PrivacyPage, ImprintPage, ServiceTeamPage, GesetzlichePflichtenPage all correctly using #001f3d background with bg-black/30 backdrop-blur-sm cards. ❌ Fixed AktuellesPage.js which was still using white theme - updated to dark theme with proper color scheme. ✅ bAV VIDEO INTEGRATION COMPLETED: Replaced existing video player in DieBavPage.js with user-provided iframe (https://www.youtube.com/embed/Dw1XYzzPTkY?si=YJI9RltcoRzwO1iY) using exact specifications provided. Updated video container styling to match dark theme with border. All pages now have consistent visual experience across entire website."
+          comment: "FINAL COLOR SCHEME CONSISTENCY ACHIEVED: ✅ Reviewed all pages - DieBavPage, BkvPage, BuvPage, AboutPage, ContactPage, PrivacyPage, ImprintPage, ServiceTeamPage, GesetzlichePflichtenPage all correctly using #001f3d background with bg-black/30 backdrop-blur-sm cards. ❌ Fixed AktuellesPage.js which was still using white theme - updated to dark theme with proper color scheme. ✅ bAV VIDEO INTEGRATION WITH END-STATE CONTROL COMPLETED: Enhanced video player with YouTube API integration for end-state detection. When video ends, shows black overlay with 'Erneut ansehen' and 'Schließen' options. Configured video with rel=0 and modestbranding=1 to prevent other video suggestions. Video container styled to match dark theme with proper borders. All pages now have consistent visual experience across entire website."
 
 agent_communication:
     - agent: "main"
