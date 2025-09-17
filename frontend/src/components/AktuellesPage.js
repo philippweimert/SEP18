@@ -220,11 +220,11 @@ const AktuellesPage = () => {
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1">
                           <User className="w-3 h-3" />
-                          <span className="truncate max-w-20">{article.author}</span>
+                          <span className="truncate max-w-20 text-gray-300">{article.author}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          <span>{article.readTime}</span>
+                          <span className="text-gray-300">{article.readTime}</span>
                         </div>
                       </div>
                       <div className="flex items-center gap-1">
