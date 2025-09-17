@@ -684,6 +684,24 @@ html {
     }
 }
 
+/* Testimonial Animations */
+@keyframes scroll-smooth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-smooth {
+  animation: scroll-smooth 60s linear infinite;
+}
+
+.animate-scroll-smooth:hover {
+  animation-play-state: paused;
+}
+
 /* Hexagon shape for benefit icons */
 .hexagon {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
