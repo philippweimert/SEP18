@@ -256,11 +256,11 @@ const DieBavPage = () => {
               {/* Benefits List */}
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700 text-base">DSGVO konform & Rechtssicher</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-acencia-accent rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700 text-base">Digital & Automatisiert</span>
                 </li>
               </ul>
@@ -268,7 +268,7 @@ const DieBavPage = () => {
               {/* CTA Button */}
               <div className="mb-8">
                 <Button 
-                  className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
+                  className="bg-acencia-accent hover:bg-acencia-accent-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
                   onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
                   <span>Jetzt starten</span>
