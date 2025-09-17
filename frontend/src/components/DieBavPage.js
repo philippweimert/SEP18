@@ -577,7 +577,14 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* More Info Section */}
+      {/* Migrated sections from Homepage */}
+      {/* Für jede Unternehmensgröße Section */}
+      <CustomerSegments />
+      
+      {/* Das sagen unsere Kunden Section */}
+      <GoogleReviews />
+
+      {/* More Info Section - Moved to bottom */}
       <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
@@ -618,13 +625,6 @@ const DieBavPage = () => {
           </div>
         </div>
       </section>
-      
-      {/* Migrated sections from Homepage */}
-      {/* Für jede Unternehmensgröße Section */}
-      <CustomerSegments />
-      
-      {/* Das sagen unsere Kunden Section */}
-      <GoogleReviews />
       
       <Footer />
     </div>
