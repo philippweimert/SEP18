@@ -11,7 +11,6 @@ import EmployerObligationsPage from "./components/EmployerObligationsPage";
 import GesetzlichePflichtenPage from "./components/GesetzlichePflichtenPage";
 import AktuellesPage from "./components/AktuellesPage";
 import DieBavPage from "./components/DieBavPage";
-import DieBavPageX from "./components/DieBavPageX";
 import DieBavPageY from "./components/DieBavPageY";
 import BkvPage from "./components/BkvPage";
 import BkvPageX from "./components/BkvPageX";
