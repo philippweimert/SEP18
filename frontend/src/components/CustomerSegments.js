@@ -8,12 +8,12 @@ const CustomerSegments = () => {
       subtitle: "5-50 Mitarbeiter",
       description: "Flexible und skalierbare bAV-Lösungen für junge Unternehmen mit schnellem Wachstum",
       icon: (
-        <svg className="w-12 h-12" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a1.96 1.96 0 0 0-2.91-.09z" stroke="#fa9939" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" stroke="#fa9939" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" stroke="#fa9939" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" stroke="#fa9939" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="19.5" cy="4.5" r="1" stroke="#fa9939" strokeWidth="1.5" fill="none"/>
+        <svg className="w-14 h-14 absolute" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a1.96 1.96 0 0 0-2.91-.09z" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="19.5" cy="4.5" r="1" stroke="#ecd2b8" strokeWidth="1.5" fill="none"/>
         </svg>
       )
     },
@@ -23,16 +23,16 @@ const CustomerSegments = () => {
       subtitle: "50-1000 Mitarbeiter",
       description: "Bewährte Konzepte für etablierte mittelständische Betriebe mit komplexeren Anforderungen",
       icon: (
-        <svg className="w-12 h-12" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 21h18" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M5 21V9l7-5v17" stroke="#fa9939" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M19 21V11l-7-4" stroke="#fa9939" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <line x1="9" y1="9" x2="9" y2="9.01" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="9" y1="12" x2="9" y2="12.01" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="9" y1="15" x2="9" y2="15.01" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="9" y1="18" x2="9" y2="18.01" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="15" y1="14" x2="15" y2="14.01" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="15" y1="17" x2="15" y2="17.01" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
+        <svg className="w-14 h-14 absolute" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 21h18" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M5 21V9l7-5v17" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M19 21V11l-7-4" stroke="#ecd2b8" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <line x1="9" y1="9" x2="9" y2="9.01" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="9" y1="12" x2="9" y2="12.01" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="9" y1="15" x2="9" y2="15.01" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="9" y1="18" x2="9" y2="18.01" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="15" y1="14" x2="15" y2="14.01" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="15" y1="17" x2="15" y2="17.01" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       )
     },
@@ -42,19 +42,19 @@ const CustomerSegments = () => {
       subtitle: "1000+ Mitarbeiter", 
       description: "Komplexe Enterprise-Lösungen für große Unternehmensstrukturen mit höchsten Anforderungen",
       icon: (
-        <svg className="w-12 h-12" viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="3" width="8" height="18" rx="1" stroke="#fa9939" strokeWidth="1.5" fill="none"/>
-          <rect x="13" y="7" width="8" height="14" rx="1" stroke="#fa9939" strokeWidth="1.5" fill="none"/>
-          <line x1="5" y1="6" x2="9" y2="6" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="5" y1="9" x2="9" y2="9" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="5" y1="12" x2="9" y2="12" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="5" y1="15" x2="9" y2="15" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="5" y1="18" x2="9" y2="18" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="15" y1="10" x2="19" y2="10" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="15" y1="13" x2="19" y2="13" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="15" y1="16" x2="19" y2="16" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <line x1="15" y1="19" x2="19" y2="19" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
-          <path d="M7 21v-1M17 21v-1" stroke="#fa9939" strokeWidth="1.5" strokeLinecap="round"/>
+        <svg className="w-14 h-14 absolute" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="8" height="18" rx="1" stroke="#ecd2b8" strokeWidth="1.5" fill="none"/>
+          <rect x="13" y="7" width="8" height="14" rx="1" stroke="#ecd2b8" strokeWidth="1.5" fill="none"/>
+          <line x1="5" y1="6" x2="9" y2="6" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="5" y1="9" x2="9" y2="9" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="5" y1="12" x2="9" y2="12" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="5" y1="15" x2="9" y2="15" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="5" y1="18" x2="9" y2="18" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="15" y1="10" x2="19" y2="10" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="15" y1="13" x2="19" y2="13" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="15" y1="16" x2="19" y2="16" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="15" y1="19" x2="19" y2="19" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M7 21v-1M17 21v-1" stroke="#ecd2b8" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       )
     }
@@ -73,55 +73,96 @@ const CustomerSegments = () => {
           </p>
         </div>
 
-        {/* Premium Cards */}
+        {/* Premium Cards - 1:1 aus HTML übernommen */}
         <div className="flex justify-center items-center gap-12 flex-wrap">
           {segments.map((segment, index) => (
             <div 
               key={segment.id}
-              className="relative w-80 h-40 bg-gradient-to-br from-[#001f3d] to-[#001a34] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 ease-out cursor-pointer group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-8"
+              className="relative w-80 h-40 rounded-3xl cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-8"
               style={{
-                boxShadow: '0 10px 30px rgba(1, 31, 61, .15), 0 4px 12px rgba(1, 31, 61, .08)',
+                background: 'linear-gradient(145deg, #0b2a3d 0%, #0a2637 100%)',
+                boxShadow: '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)',
+                borderRadius: '24px'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(11,42,61,.2), 0 8px 16px rgba(11,42,61,.12), 0 0 0 1px rgba(236,210,184,.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)';
               }}
             >
               {/* Hexagon Badge */}
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 group-hover:-translate-y-1 transition-transform duration-500">
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 grid place-items-center group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 8px 16px rgba(0,0,0,.2))'}}>
                 <svg className="w-28 h-28 absolute inset-0" viewBox="0 0 100 100">
                   <polygon 
                     points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5"
-                    fill="#001a34"
-                    stroke="#fa9939"
+                    fill="#092130"
+                    stroke="#ecd2b8"
                     strokeWidth="2.5"
                     opacity="0.98"
                   />
                   <polygon 
                     points="50,14 82,32 82,68 50,86 18,68 18,32"
-                    stroke="#fa9939"
-                    strokeWidth="4"
+                    stroke="#ecd2b8"
+                    strokeWidth="5"
                     fill="none"
-                    className="group-hover:stroke-[6] transition-all duration-300"
+                    className="group-hover:stroke-[7] transition-all duration-300"
                   />
                 </svg>
                 
                 {/* Icon */}
-                <div className="absolute inset-0 flex items-center justify-center animate-float">
-                  {segment.icon}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 animate-float">
+                    {segment.icon}
+                  </div>
                 </div>
               </div>
               
-              {/* Label */}
-              <div className="w-3/4 h-12 bg-gradient-to-r from-[#fa9939] to-[#e88a33] rounded-2xl flex items-center justify-center text-white font-bold text-lg tracking-wide relative overflow-hidden group-hover:shadow-lg transition-all duration-300">
+              {/* Label - 1:1 aus HTML übernommen */}
+              <div 
+                className="w-3/4 h-12 rounded-2xl flex items-center justify-center font-semibold text-lg tracking-wide relative overflow-hidden"
+                style={{
+                  background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
+                  color: '#0b2a3d',
+                  fontSize: '19px',
+                  fontWeight: '600',
+                  letterSpacing: '.4px',
+                  boxShadow: 'inset 0 2px 4px rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.08)'
+                }}
+              >
                 <span className="relative z-10">{segment.title}</span>
                 
-                {/* Shine effect */}
-                <div className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-500"></div>
-                
-                {/* Inner shadow for depth */}
-                <div className="absolute inset-0 rounded-2xl shadow-inner"></div>
+                {/* Shine effect - 1:1 aus HTML */}
+                <div 
+                  className="absolute top-0 w-full h-full transition-all duration-500 group-hover:left-full"
+                  style={{
+                    left: '-100%',
+                    background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent)'
+                  }}
+                ></div>
               </div>
 
-              {/* Base Accent */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/5 h-0.5 bg-gradient-to-r from-transparent via-[#fa9939]/70 to-transparent rounded-full opacity-80">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#fa9939]/40 to-transparent rounded-full blur-sm"></div>
+              {/* Base Accent - 1:1 aus HTML übernommen */}
+              <div 
+                className="absolute left-1/2 transform -translate-x-1/2 rounded-full"
+                style={{
+                  bottom: '15px',
+                  width: '60%',
+                  height: '2px',
+                  background: 'linear-gradient(90deg, transparent, rgba(236,210,184,.5) 20%, rgba(236,210,184,.7) 50%, rgba(236,210,184,.5) 80%, transparent)',
+                  opacity: '0.8'
+                }}
+              >
+                <div 
+                  className="absolute left-0 right-0 rounded-full"
+                  style={{
+                    top: '-2px',
+                    height: '6px',
+                    background: 'inherit',
+                    filter: 'blur(4px)',
+                    opacity: '0.6'
+                  }}
+                ></div>
               </div>
             </div>
           ))}
