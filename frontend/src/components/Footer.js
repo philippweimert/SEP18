@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-16">
+    <footer className="bg-[#001F3C] border-t border-[#2a4a6b] py-16">
       {/* Apple-like Container */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
@@ -11,10 +11,10 @@ const Footer = () => {
           <div className="md:col-span-12">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8">
               <Link to="/" className="block mb-6 md:mb-0">
-                <div className="text-2xl font-semibold text-gray-900 tracking-tight">
+                <div className="text-2xl font-semibold text-white tracking-tight">
                   ACENCIA
                 </div>
-                <div className="text-sm text-gray-500 font-medium tracking-wider uppercase mt-1">
+                <div className="text-sm text-gray-300 font-medium tracking-wider uppercase mt-1">
                   Wir machen bAV einfach
                 </div>
               </Link>
@@ -24,7 +24,7 @@ const Footer = () => {
                 {/* LinkedIn Button */}
                 <button
                   onClick={() => window.open('https://www.linkedin.com/company/acencia/', '_blank')}
-                  className="flex items-center justify-center w-10 h-10 bg-gray-200 hover:bg-orange-100 text-gray-600 hover:text-orange-600 rounded-lg transition-all duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                  className="flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-orange-500 text-white hover:text-white rounded-lg transition-all duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001F3C]"
                   aria-label="LinkedIn"
                 >
                   <svg
@@ -44,7 +44,7 @@ const Footer = () => {
                 {/* YouTube Button */}
                 <button
                   onClick={() => window.open('https://www.youtube.com/@ACENCIAde', '_blank')}
-                  className="flex items-center justify-center w-10 h-10 bg-gray-200 hover:bg-orange-100 text-gray-600 hover:text-orange-600 rounded-lg transition-all duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                  className="flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-orange-500 text-white hover:text-white rounded-lg transition-all duration-150 ease-out focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#001F3C]"
                   aria-label="YouTube"
                 >
                   <svg
@@ -66,16 +66,16 @@ const Footer = () => {
         </div>
 
         {/* Apple-like Bottom Section */}
-        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
-          <div className="text-sm text-gray-500 font-normal">
+        <div className="border-t border-[#2a4a6b] mt-12 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+          <div className="text-sm text-gray-300 font-normal">
             © 2025 ACENCIA GmbH. Alle Rechte vorbehalten.
           </div>
 
           <div className="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0">
-            <Link to="/datenschutz" className="text-sm text-gray-500 hover:text-orange-600 transition-colors duration-150 font-normal">
+            <Link to="/datenschutz" className="text-sm text-gray-300 hover:text-orange-400 transition-colors duration-150 font-normal">
               Datenschutzerklärung
             </Link>
-            <Link to="/impressum" className="text-sm text-gray-500 hover:text-orange-600 transition-colors duration-150 font-normal">
+            <Link to="/impressum" className="text-sm text-gray-300 hover:text-orange-400 transition-colors duration-150 font-normal">
               Impressum
             </Link>
           </div>
