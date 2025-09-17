@@ -97,12 +97,22 @@ module.exports = {
   				'5': 'hsl(var(--chart-5))'
   			},
   			acencia: {
-  				DEFAULT: '#001f3c',
-  				dark: '#001529',
+  				// Primärfarben
+  				'primary-900': '#001f3d',
+  				'primary-400': '#88a9c3', 
+  				'primary-50': '#e3ebf2',
+  				'white': '#ffffff',
+  				// Sekundärfarben  
+  				'accent': '#fa9939',
+  				'accent-hover': '#e88a33',
+  				'accent-active': '#d67b2d',
+  				'accent-50': '#f8dcbf',
+  				// Legacy Support (für bestehende Verwendung)
+  				DEFAULT: '#001f3d',
+  				dark: '#001529', 
   				light: '#0d2847',
-  				blue: '#98a9c3',
+  				blue: '#88a9c3',
   				'blue-light': '#e3ebf2',
-  				white: '#ffffff',
   				orange: '#fa9939',
   				'orange-light': '#f8dcbf'
   			}
