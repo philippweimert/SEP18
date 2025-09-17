@@ -363,24 +363,24 @@ const DieBavPage = () => {
             {/* Definition Section - Left */}
             <div>
               <div 
-                className="cursor-pointer bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-all duration-150"
+                className="cursor-pointer bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-all duration-150 h-32 flex items-center"
                 onClick={() => setIsDefinitionExpanded(!isDefinitionExpanded)}
               >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between w-full">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Shield className="w-6 h-6 text-orange-600" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">
                         Was ist betriebliche Altersvorsorge?
                       </h3>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 text-sm leading-tight">
                         Klicken Sie hier, um mehr über bAV und Ihre Rechte zu erfahren
                       </p>
                     </div>
                   </div>
-                  <div className="text-gray-400">
+                  <div className="text-gray-400 flex-shrink-0 ml-4">
                     {isDefinitionExpanded ? (
                       <ChevronUp className="w-5 h-5" />
                     ) : (
@@ -426,24 +426,24 @@ const DieBavPage = () => {
             {/* Challenges Section - Right */}
             <div>
               <div 
-                className="cursor-pointer bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-all duration-150"
+                className="cursor-pointer bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-all duration-150 h-32 flex items-center"
                 onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
               >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between w-full">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
                       <AlertTriangle className="w-6 h-6 text-red-600" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">
                         bAV-Verwaltung ist komplex, zeitaufwendig und fehleranfällig
                       </h3>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 text-sm leading-tight">
                         Klicken Sie hier, um die Herausforderungen und unsere Lösungen zu sehen
                       </p>
                     </div>
                   </div>
-                  <div className="text-gray-400">
+                  <div className="text-gray-400 flex-shrink-0 ml-4">
                     {isChallengesExpanded ? (
                       <ChevronUp className="w-5 h-5" />
                     ) : (
