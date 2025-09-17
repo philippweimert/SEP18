@@ -363,53 +363,53 @@ const DieBavPage = () => {
               }`}>
                 <div className="space-y-6">
                   {/* Main Definition */}
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                  <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                    <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                       <Shield className="w-5 h-5 text-acencia-accent mr-2" />
                       Definition & Grundlagen
                     </h4>
                     <div className="space-y-4">
-                      <p className="text-gray-700 leading-relaxed text-sm">
+                      <p className="text-gray-200 leading-relaxed text-sm">
                         Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
                         Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
                       </p>
                       
-                      <p className="text-gray-700 leading-relaxed text-sm">
+                      <p className="text-gray-200 leading-relaxed text-sm">
                         Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
                       </p>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                         <div>
-                          <h5 className="text-sm font-medium text-gray-900 mb-2">Vorteile für Arbeitnehmer:</h5>
+                          <h5 className="text-sm font-medium text-white mb-2">Vorteile für Arbeitnehmer:</h5>
                           <ul className="space-y-1">
                             <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-600 mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-600">Steuer- und Sozialabgabenersparnis</span>
+                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
+                              <span className="text-xs text-gray-300">Steuer- und Sozialabgabenersparnis</span>
                             </li>
                             <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-600 mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-600">Zusätzliche Altersvorsorge</span>
+                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
+                              <span className="text-xs text-gray-300">Zusätzliche Altersvorsorge</span>
                             </li>
                             <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-600 mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-600">Rechtlicher Anspruch seit 2002</span>
+                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
+                              <span className="text-xs text-gray-300">Rechtlicher Anspruch seit 2002</span>
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h5 className="text-sm font-medium text-gray-900 mb-2">Vorteile für Arbeitgeber:</h5>
+                          <h5 className="text-sm font-medium text-white mb-2">Vorteile für Arbeitgeber:</h5>
                           <ul className="space-y-1">
                             <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-600 mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-600">Mitarbeiterbindung stärken</span>
+                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
+                              <span className="text-xs text-gray-300">Mitarbeiterbindung stärken</span>
                             </li>
                             <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-600 mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-600">Attraktivität als Arbeitgeber</span>
+                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
+                              <span className="text-xs text-gray-300">Attraktivität als Arbeitgeber</span>
                             </li>
                             <li className="flex items-start space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-600 mt-1 flex-shrink-0" />
-                              <span className="text-xs text-gray-600">Sozialabgabenersparnis möglich</span>
+                              <CheckCircle className="w-3 h-3 text-acencia-accent mt-1 flex-shrink-0" />
+                              <span className="text-xs text-gray-300">Sozialabgabenersparnis möglich</span>
                             </li>
                           </ul>
                         </div>
@@ -418,14 +418,14 @@ const DieBavPage = () => {
                   </div>
 
                   {/* Legal Requirements */}
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <div className="bg-black/40 backdrop-blur-sm border border-red-400/30 rounded-lg p-4">
                     <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <AlertTriangle className="w-4 h-4 text-red-600" />
+                      <div className="w-6 h-6 bg-red-600/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <AlertTriangle className="w-4 h-4 text-red-400" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-red-800 font-semibold text-sm mb-2">Rechtliche Verpflichtungen</h4>
-                        <p className="text-red-700 text-sm leading-relaxed mb-3">
+                        <h4 className="text-red-300 font-semibold text-sm mb-2">Rechtliche Verpflichtungen</h4>
+                        <p className="text-gray-200 text-sm leading-relaxed mb-3">
                           <strong>Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung.</strong> 
                           Der Arbeitgeber ist verpflichtet, ein entsprechendes Angebot zu unterbreiten und zu dokumentieren.
                         </p>
@@ -433,21 +433,21 @@ const DieBavPage = () => {
                         <div className="flex flex-col sm:flex-row gap-2">
                           <button
                             onClick={() => window.open('https://www.gesetze-im-internet.de/betravg/__1a.html', '_blank')}
-                            className="inline-flex items-center px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-medium rounded-lg transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                            className="inline-flex items-center px-3 py-2 bg-red-600/70 hover:bg-red-600 text-white text-xs font-medium rounded-lg transition-colors duration-150"
                           >
                             <AlertTriangle className="w-3 h-3 mr-1" />
                             § 1a BetrAVG - Rechtsanspruch
                           </button>
                           <button
                             onClick={() => window.open('https://www.gesetze-im-internet.de/betravg/__4a.html', '_blank')}
-                            className="inline-flex items-center px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-medium rounded-lg transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                            className="inline-flex items-center px-3 py-2 bg-red-600/70 hover:bg-red-600 text-white text-xs font-medium rounded-lg transition-colors duration-150"
                           >
                             <Shield className="w-3 h-3 mr-1" />
                             § 4a BetrAVG - Arbeitgeberpflichten
                           </button>
                         </div>
                         
-                        <p className="text-red-600 text-xs mt-2 italic">
+                        <p className="text-red-300 text-xs mt-2 italic">
                           Betriebsrentengesetz (BetrAVG) - Bundesgesetzblatt
                         </p>
                       </div>
