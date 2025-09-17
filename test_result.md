@@ -247,6 +247,30 @@ test_plan:
           agent: "main"
           comment: "Successfully integrated bAV, bKV, and bUV icons into both desktop and mobile navigation. Icons downloaded to public directory and added to navigation links with proper sizing (h-6 for desktop, h-5 for mobile). Adjusted navigation spacing from space-x-6 to space-x-8 to accommodate icons. All icons display correctly with proper alignment."
 
+  - task: "Homepage Content Migration - Remove Sections"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/Homepage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Need to remove CustomerSegments and GoogleReviews components from Homepage.js to migrate them to DieBavPage.js"
+
+  - task: "bAV Page Content Migration - Add Sections"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/DieBavPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Need to add CustomerSegments and GoogleReviews components to DieBavPage.js at the bottom of the page"
+
 agent_communication:
     - agent: "main"
       message: "Successfully completed major homepage restructuring: Replaced entire InteractiveMainSections with simplified challenges/solutions display, added new 3-step process section below Hero with requested text, and removed all Demo buchen buttons. All changes working correctly as verified by screenshots."
@@ -266,3 +290,5 @@ agent_communication:
       message: "SVG-BASED NAVIGATION CARDS IMPLEMENTED: Completely replaced small icons + text with large SVG navigation cards matching ACENCIA logo size. Removed redundant text labels and implemented corporate-design SVG cards (#001f3c) with titles and subtitles. Cards feature hover effects and maintain dropdown functionality. Navigation spacing adjusted for larger elements. Both desktop and mobile navigation updated with consistent design."
     - agent: "main"
       message: "NAVIGATION STRUCTURE REORGANIZED: ACENCIA logo repositioned further left (mr-12) for better spacing. Removed 'Kontakt' from main navigation and integrated it as subpage under 'über uns' dropdown. Eliminated 'Beratung' subpage completely. Updated both desktop and mobile navigation. Removed unused state variables and routes. Navigation now cleaner with: bAV, bKV, bUV SVG cards + 'über uns' (with Service-Team, Kontakt subpages) + Login Portal."
+    - agent: "main"
+      message: "STARTING HOMEPAGE CONTENT MIGRATION: User requested to move 'Für jede Unternehmensgröße' (CustomerSegments component) and 'Das sagen unsere Kunden' (GoogleReviews component) sections from Homepage to DieBavPage.js without changes. These sections will be appended at the bottom of the bAV page and removed from homepage. Implementation starting now."
