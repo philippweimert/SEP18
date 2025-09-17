@@ -107,7 +107,7 @@ const DieBavPage = () => {
   const solutions = [
     {
       title: "Digitale Automatisierung",
-      description: "Vollautomatisierte Abwicklung eliminiert Fehlerquellen"
+      description: "Digital & automatisiert - eliminiert Fehlerquellen"
     },
     {
       title: "HR-Entlastung",
