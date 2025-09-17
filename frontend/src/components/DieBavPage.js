@@ -581,27 +581,47 @@ const DieBavPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {processSupportCards.map((card, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full"
-              >
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-orange-600">
-                    {card.icon}
+              <div key={index} className="bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-150">
+                {/* Collapsed State */}
+                <div 
+                  className="cursor-pointer p-6 flex flex-col items-center text-center"
+                  onClick={() => setExpandedProcessCard(expandedProcessCard === index ? null : index)}
+                >
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                    <div className="text-orange-600">
+                      {card.icon}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {card.title}
+                  </h3>
+                  
+                  <p className="text-sm font-medium text-orange-600 mb-3">
+                    {card.subtitle}
+                  </p>
+
+                  <div className="text-gray-400 mt-2">
+                    {expandedProcessCard === index ? (
+                      <ChevronUp className="w-5 h-5" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5" />
+                    )}
                   </div>
                 </div>
-                
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {card.title}
-                </h3>
-                
-                <p className="text-sm font-medium text-orange-600 mb-3">
-                  {card.subtitle}
-                </p>
-                
-                <p className="text-gray-600 leading-relaxed text-sm">
-                  {card.description}
-                </p>
+
+                {/* Expanded Content */}
+                <div className={`transition-all duration-200 overflow-hidden ${
+                  expandedProcessCard === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="px-6 pb-6">
+                    <div className="border-t border-gray-200 pt-4">
+                      <p className="text-gray-600 leading-relaxed text-sm">
+                        {card.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
