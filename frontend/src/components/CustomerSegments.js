@@ -73,17 +73,17 @@ const CustomerSegments = () => {
           </p>
         </div>
 
-        {/* Premium Cards - 1:1 aus HTML übernommen */}
-        <div className="flex justify-center items-start gap-12 flex-wrap">
+        {/* Premium Cards - 3x1 Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {segments.map((segment, index) => (
-            <div key={segment.id} className="flex flex-col items-center max-w-sm">
+            <div key={segment.id} className="flex flex-col items-center">
               {/* Hexagonal Card */}
               <div 
-                className="relative w-80 h-40 rounded-3xl cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-8 mb-6"
+                className="relative w-full h-36 rounded-3xl cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-7 mb-5"
                 style={{
                   background: 'linear-gradient(145deg, #0b2a3d 0%, #0a2637 100%)',
                   boxShadow: '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)',
-                  borderRadius: '24px'
+                  borderRadius: '22px'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(11,42,61,.2), 0 8px 16px rgba(11,42,61,.12), 0 0 0 1px rgba(236,210,184,.1)';
@@ -93,8 +93,8 @@ const CustomerSegments = () => {
                 }}
               >
                 {/* Hexagon Badge */}
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-28 h-28 grid place-items-center group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 8px 16px rgba(0,0,0,.2))'}}>
-                  <svg className="w-28 h-28 absolute inset-0" viewBox="0 0 100 100">
+                <div className="absolute -top-9 left-1/2 transform -translate-x-1/2 w-24 h-24 grid place-items-center group-hover:-translate-y-1 transition-transform duration-500" style={{filter: 'drop-shadow(0 7px 14px rgba(0,0,0,.2))'}}>
+                  <svg className="w-24 h-24 absolute inset-0" viewBox="0 0 100 100">
                     <polygon 
                       points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5"
                       fill="#092130"
@@ -111,29 +111,29 @@ const CustomerSegments = () => {
                     />
                   </svg>
                   
-                  {/* Icon */}
+                  {/* Icon Container - zentriert und angepasst */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14">
+                    <div className="w-12 h-12 flex items-center justify-center">
                       {segment.icon}
                     </div>
                   </div>
                 </div>
                 
-                {/* Label - 1:1 aus HTML übernommen */}
+                {/* Label */}
                 <div 
-                  className="w-3/4 h-12 rounded-2xl flex items-center justify-center font-semibold text-lg tracking-wide relative overflow-hidden"
+                  className="w-11/12 h-11 rounded-xl flex items-center justify-center font-semibold text-sm tracking-wide relative overflow-hidden px-3"
                   style={{
                     background: 'linear-gradient(135deg, #ecd2b8 0%, #e8c9a8 100%)',
                     color: '#0b2a3d',
-                    fontSize: '19px',
+                    fontSize: '15px',
                     fontWeight: '600',
-                    letterSpacing: '.4px',
+                    letterSpacing: '.3px',
                     boxShadow: 'inset 0 2px 4px rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.08)'
                   }}
                 >
-                  <span className="relative z-10">{segment.title}</span>
+                  <span className="relative z-10 text-center leading-tight">{segment.title}</span>
                   
-                  {/* Shine effect - 1:1 aus HTML */}
+                  {/* Shine effect */}
                   <div 
                     className="absolute top-0 w-full h-full transition-all duration-500 group-hover:left-full"
                     style={{
@@ -143,12 +143,12 @@ const CustomerSegments = () => {
                   ></div>
                 </div>
 
-                {/* Base Accent - 1:1 aus HTML übernommen */}
+                {/* Base Accent */}
                 <div 
                   className="absolute left-1/2 transform -translate-x-1/2 rounded-full"
                   style={{
-                    bottom: '15px',
-                    width: '60%',
+                    bottom: '12px',
+                    width: '55%',
                     height: '2px',
                     background: 'linear-gradient(90deg, transparent, rgba(236,210,184,.5) 20%, rgba(236,210,184,.7) 50%, rgba(236,210,184,.5) 80%, transparent)',
                     opacity: '0.8'
@@ -170,7 +170,7 @@ const CustomerSegments = () => {
               {/* Information direkt unter der Karte */}
               <div className="text-center">
                 <p className="text-acencia-accent font-medium text-sm mb-3">{segment.subtitle}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{segment.description}</p>
+                <p className="text-gray-300 text-sm leading-relaxed px-2">{segment.description}</p>
               </div>
             </div>
           ))}
