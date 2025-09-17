@@ -9,6 +9,7 @@ import { Shield, Users, TrendingUp, ArrowRight, Building2, AlertTriangle, CheckC
 
 const DieBavPage = () => {
   const [isChallengesExpanded, setIsChallengesExpanded] = useState(false);
+  const [isDefinitionExpanded, setIsDefinitionExpanded] = useState(false);
   const location = useLocation();
   const [autoplay, setAutoplay] = useState(false);
   const [showVideoOverlay, setShowVideoOverlay] = useState(false);
