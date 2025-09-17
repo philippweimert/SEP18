@@ -206,17 +206,17 @@ const AktuellesPage = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight group-hover:text-orange-600 transition-colors duration-150 line-clamp-2">
+                    <h3 className="text-lg font-semibold text-white mb-3 leading-tight group-hover:text-acencia-accent transition-colors duration-150 line-clamp-2">
                       {article.title}
                     </h3>
 
                     {/* Excerpt */}
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                       {article.excerpt}
                     </p>
 
                     {/* Meta Info */}
-                    <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-100">
+                    <div className="flex items-center justify-between text-xs text-gray-400 pt-4 border-t border-white/10">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1">
                           <User className="w-3 h-3" />
