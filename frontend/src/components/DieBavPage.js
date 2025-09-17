@@ -422,6 +422,13 @@ const DieBavPage = () => {
         </div>
       </section>
       
+      {/* Migrated sections from Homepage */}
+      {/* Für jede Unternehmensgröße Section */}
+      <CustomerSegments />
+      
+      {/* Das sagen unsere Kunden Section */}
+      <GoogleReviews />
+      
       <Footer />
     </div>
   );
