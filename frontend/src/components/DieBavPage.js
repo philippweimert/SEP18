@@ -666,48 +666,6 @@ const DieBavPage = () => {
       
       {/* Das sagen unsere Kunden Section */}
       <GoogleReviews />
-
-      {/* More Info Section - Dunkelblauer Hintergrund */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-4 tracking-tight text-white">
-              Mehr erfahren
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {moreInfoBoxes.map((box, index) => (
-              <Link 
-                key={index}
-                to={box.link}
-                className="group block"
-              >
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 transition-all duration-150">
-                    <div className="text-acencia-accent group-hover:text-acencia-accent-hover transition-colors duration-150">
-                      {box.icon}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-acencia-accent transition-colors duration-150">
-                    {box.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 leading-relaxed mb-4 text-sm">
-                    {box.description}
-                  </p>
-                  
-                  <div className="flex items-center text-acencia-accent group-hover:text-acencia-accent-hover transition-colors duration-150">
-                    <span className="text-sm font-medium">Mehr erfahren</span>
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform duration-150" />
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
       
       <Footer />
     </div>
