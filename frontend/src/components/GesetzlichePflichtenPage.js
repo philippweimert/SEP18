@@ -237,140 +237,141 @@ const GesetzlichePflichtenPage = () => {
         </div>
       </section>
 
-      {/* Chancen für Arbeitgeber Section */}
+      {/* Pflichten & Chancen Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
-              Chancen für Arbeitgeber
+              Pflichten & Chancen für Arbeitgeber
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Wie die bAV Ihr Unternehmen stärkt und nachhaltigen Erfolg schafft.
+              Gesetzliche Verpflichtungen und unternehmerische Chancen der bAV im Überblick.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-blue-300" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Left Column - Pflichten */}
+            <div>
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center mr-4">
+                  <AlertTriangle className="w-6 h-6 text-red-300" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    Mitarbeiterbindung & -gewinnung
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed text-sm">
-                    Attraktive bAV-Angebote stärken die Arbeitgeberattraktivität im Wettbewerb um Fachkräfte und reduzieren die Fluktuation merklich.
-                  </p>
+                <h3 className="text-2xl font-semibold text-white tracking-tight">
+                  Ihre Pflichten
+                </h3>
+              </div>
+              
+              <div className="space-y-4">
+                {obligations.map((obligation, index) => (
+                  <div key={index} className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center">
+                        <div className="text-acencia-accent">
+                          {obligation.icon}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-base font-semibold text-white mb-2">
+                          {obligation.title}
+                        </h4>
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {obligation.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column - Chancen */}
+            <div>
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center mr-4">
+                  <CheckCircle className="w-6 h-6 text-green-300" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white tracking-tight">
+                  Ihre Chancen
+                </h3>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
+                      <Users className="w-5 h-5 text-blue-300" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-base font-semibold text-white mb-2">
+                        Mitarbeiterbindung & -gewinnung
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Attraktive bAV-Angebote stärken die Arbeitgeberattraktivität im Wettbewerb um Fachkräfte und reduzieren die Fluktuation merklich.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-green-300" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-base font-semibold text-white mb-2">
+                        Steuerliche Vorteile
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Sozialversicherungsersparnisse durch Entgeltumwandlung und steuerliche Begünstigungen der Arbeitgeberbeiträge gemäß EStG.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center">
+                      <Building2 className="w-5 h-5 text-purple-300" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-base font-semibold text-white mb-2">
+                        Imagegewinn & CSR
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Positionierung als verantwortungsbewusster Arbeitgeber und Stärkung der Corporate Social Responsibility.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center">
+                      <ArrowRight className="w-5 h-5 text-orange-300" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-base font-semibold text-white mb-2">
+                        Kosteneffiziente Zusatzleistung
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Erhöhung der Nettoentlohnung ohne zusätzliche Arbeitgeberkosten durch geschickte Nutzung steuerlicher Vorteile.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-green-300" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    Steuerliche Vorteile
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed text-sm">
-                    Sozialversicherungsersparnisse durch Entgeltumwandlung und steuerliche Begünstigungen der Arbeitgeberbeiträge gemäß EStG.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center">
-                  <Building2 className="w-6 h-6 text-purple-300" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    Imagegewinn & CSR
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed text-sm">
-                    Positionierung als verantwortungsbewusster Arbeitgeber und Stärkung der Corporate Social Responsibility.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center">
-                  <ArrowRight className="w-6 h-6 text-orange-300" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    Kosteneffiziente Zusatzleistung
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed text-sm">
-                    Erhöhung der Nettoentlohnung ohne zusätzliche Arbeitgeberkosten durch geschickte Nutzung steuerlicher Vorteile.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-12">
             <Button 
               className="bg-acencia-accent/70 hover:bg-acencia-accent text-white px-8 py-4 rounded-lg font-medium transition-colors duration-150 flex items-center space-x-2 mx-auto"
               onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
             >
               <Calendar className="w-5 h-5" />
-              <span>Jetzt Chancen besprechen - Kostenloses Erstgespräch</span>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Obligations Section */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
-              Ihre Pflichten als Arbeitgeber
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Diese gesetzlichen Verpflichtungen müssen alle Arbeitgeber bei der bAV beachten.
-            </p>
-          </div>
-          
-          <div className="space-y-6">
-            {obligations.map((obligation, index) => (
-              <div key={index} className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-black/40 transition-all duration-150">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center">
-                    <div className="text-acencia-accent">
-                      {obligation.icon}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {obligation.title}
-                    </h3>
-                    <p className="text-gray-200 leading-relaxed mb-3 font-medium">
-                      {obligation.description}
-                    </p>
-                    <p className="text-gray-300 leading-relaxed text-sm">
-                      {obligation.details}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Button 
-              className="bg-acencia-accent/70 hover:bg-acencia-accent text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center space-x-2 mx-auto"
-              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
-            >
-              <Calendar className="w-4 h-4" />
-              <span>Pflichten erfüllen - Kostenloses Erstgespräch buchen</span>
+              <span>Pflichten & Chancen besprechen - Kostenloses Erstgespräch</span>
             </Button>
           </div>
         </div>
