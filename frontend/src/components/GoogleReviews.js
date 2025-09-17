@@ -180,5 +180,3 @@ const GoogleReviews = () => {
 };
 
 export default GoogleReviews;
-
-export default GoogleReviews;
