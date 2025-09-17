@@ -667,11 +667,11 @@ const DieBavPage = () => {
       {/* Das sagen unsere Kunden Section */}
       <GoogleReviews />
 
-      {/* More Info Section - Moved to bottom */}
-      <section className="bg-gray-50 py-16 md:py-20">
+      {/* More Info Section - Mit alternierendem Hintergrund */}
+      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-3xl font-semibold mb-4 tracking-tight text-white">
               Mehr erfahren
             </h2>
           </div>
