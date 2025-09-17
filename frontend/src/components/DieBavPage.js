@@ -493,18 +493,18 @@ const DieBavPage = () => {
               }`}>
                 <div className="space-y-6">
                   {/* Challenges */}
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                      <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
+                  <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                    <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                      <AlertTriangle className="w-5 h-5 text-red-400 mr-2" />
                       Herausforderungen
                     </h4>
                     <ul className="space-y-3">
                       {challenges.map((challenge, index) => (
                         <li key={index} className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
                           <div>
-                            <h5 className="text-sm font-medium text-gray-900 mb-1">{challenge.title}</h5>
-                            <p className="text-sm text-gray-600">{challenge.description}</p>
+                            <h5 className="text-sm font-medium text-white mb-1">{challenge.title}</h5>
+                            <p className="text-sm text-gray-300">{challenge.description}</p>
                           </div>
                         </li>
                       ))}
@@ -512,18 +512,18 @@ const DieBavPage = () => {
                   </div>
 
                   {/* Solutions */}
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
+                  <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                    <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                      <CheckCircle className="w-5 h-5 text-acencia-accent mr-2" />
                       Unsere Lösungen
                     </h4>
                     <ul className="space-y-3">
                       {solutions.map((solution, index) => (
                         <li key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-acencia-accent mt-0.5 flex-shrink-0" />
                           <div>
-                            <h5 className="text-sm font-medium text-gray-900 mb-1">{solution.title}</h5>
-                            <p className="text-sm text-gray-600">{solution.description}</p>
+                            <h5 className="text-sm font-medium text-white mb-1">{solution.title}</h5>
+                            <p className="text-sm text-gray-300">{solution.description}</p>
                           </div>
                         </li>
                       ))}
