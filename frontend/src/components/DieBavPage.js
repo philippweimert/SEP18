@@ -144,6 +144,33 @@ const DieBavPage = () => {
     }
   ];
 
+  const processSupportCards = [
+    {
+      title: "Rechtliche Prüfung & Einrichtung der bAV",
+      subtitle: "Wir geben Sicherheit.",
+      description: "Wir prüfen alle rechtlichen Grundlagen und entwickeln ein passendes Vorsorgemodell – individuell, unabhängig und zukunftssicher.",
+      icon: <FileCheck className="w-6 h-6" />
+    },
+    {
+      title: "Digitale Verwaltung & laufender Support",
+      subtitle: "Wir erleichtern den Alltag.",
+      description: "Wir digitalisieren Ihre bAV-Verwaltung, automatisieren Prozesse und begleiten Sie mit persönlichem Support – unabhängig vom aktuellen Stand Ihrer bAV.",
+      icon: <Settings className="w-6 h-6" />
+    },
+    {
+      title: "Mitarbeiterkommunikation & (digitale) Beratung",
+      subtitle: "Wir begeistern Ihre Mitarbeitenden.",
+      description: "Wir informieren über Ansprüche und beraten individuell – digital oder persönlich, verständlich und wertschätzend.",
+      icon: <MessageCircle className="w-6 h-6" />
+    },
+    {
+      title: "Steuervorteile & Kostenoptimierung",
+      subtitle: "Wir schaffen Mehrwert.",
+      description: "Durch Entgeltumwandlung sparen Unternehmen und Mitarbeitende Steuern und Sozialabgaben – das senkt Kosten und steigert Ihre Attraktivität als Arbeitgeber.",
+      icon: <PiggyBank className="w-6 h-6" />
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
