@@ -570,11 +570,11 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* Process Support Section */}
-      <section className="bg-white py-16 md:py-20">
+      {/* Process Support Section - Dunkelblauer Hintergrund */}
+      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Wir begleiten Sie entlang aller Prozesse - dauerhaft
             </h2>
           </div>
