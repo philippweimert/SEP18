@@ -236,7 +236,7 @@ const AktuellesPage = () => {
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-4">
                       {article.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md">
+                        <span key={tagIndex} className="px-2 py-1 bg-black/40 text-gray-300 text-xs rounded-md border border-white/10">
                           #{tag}
                         </span>
                       ))}
