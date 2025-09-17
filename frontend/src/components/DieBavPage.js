@@ -171,6 +171,29 @@ const DieBavPage = () => {
     }
   ];
 
+  const benefitsCards = [
+    {
+      title: "Reduktion von Kosten und Aufwänden",
+      description: "Wir digitalisieren und vereinfachen Ihre laufenden Verwaltungsprozesse, auf Basis eines kostenneutralen Modells.",
+      icon: <DollarSign className="w-6 h-6" />
+    },
+    {
+      title: "Minimierung von Haftungsrisiken",
+      description: "Wir übernehmen komplexe rechtliche Prüfprozesse und minimieren Haftungsrisiken - heute und in Zukunft.",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Mitarbeiterbindung und -motivation",
+      description: "Innovative Vorsorgemodelle sowie eine moderne Mitarbeiter-kommunikation und -Beratung bieten attraktive Benefits.",
+      icon: <Heart className="w-6 h-6" />
+    },
+    {
+      title: "Entlastung der Personalabteilung",
+      description: "Unser persönlicher Support unterstützt Sie als Partner proaktiv bei Anpassungs- oder Veränderungsmaßnahmen.",
+      icon: <UserCheck className="w-6 h-6" />
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
