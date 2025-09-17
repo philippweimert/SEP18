@@ -471,7 +471,7 @@ const GesetzlichePflichtenPage = () => {
               <Calendar className="w-8 h-8 text-acencia-accent" />
             </div>
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
-              Rechtssichere bAV implementieren
+              Rechtlichen Rahmen optimal nutzen
             </h2>
             <p className="text-gray-200 mb-8 leading-relaxed max-w-2xl mx-auto">
               Lassen Sie sich von unseren Experten beraten, wie Sie alle gesetzlichen Pflichten 
