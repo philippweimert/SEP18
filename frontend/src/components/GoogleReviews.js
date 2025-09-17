@@ -128,7 +128,7 @@ const GoogleReviews = () => {
                   {[1,2,3,4,5].map((star) => (
                     <Star 
                       key={star} 
-                      className={`w-4 h-4 ${star <= review.rating ? 'text-orange-500 fill-orange-500' : 'text-gray-300'}`}
+                      className={`w-4 h-4 ${star <= review.rating ? 'text-acencia-accent fill-acencia-accent' : 'text-gray-300'}`}
                     />
                   ))}
                 </div>
