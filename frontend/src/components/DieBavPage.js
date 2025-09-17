@@ -667,7 +667,7 @@ const DieBavPage = () => {
       {/* Das sagen unsere Kunden Section */}
       <GoogleReviews />
 
-      {/* More Info Section - Mit alternierendem Hintergrund */}
+      {/* More Info Section - Dunkelblauer Hintergrund */}
       <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
