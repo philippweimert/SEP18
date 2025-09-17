@@ -270,31 +270,68 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* Definition Section */}
+      {/* Definition Section - Expandable */}
       <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="bg-white rounded-lg p-8 border border-gray-200">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                <Shield className="w-6 h-6 text-orange-600" />
+          <div 
+            className="cursor-pointer bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-all duration-150"
+            onClick={() => setIsDefinitionExpanded(!isDefinitionExpanded)}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-orange-600" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-1">
+                    Was ist betriebliche Altersvorsorge?
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Klicken Sie hier, um mehr über bAV und Ihre Rechte zu erfahren
+                  </p>
+                </div>
               </div>
-              <h2 className="text-3xl font-semibold text-gray-900 tracking-tight">
-                Was ist betriebliche Altersvorsorge?
-              </h2>
+              <div className="text-gray-400">
+                {isDefinitionExpanded ? (
+                  <ChevronUp className="w-5 h-5" />
+                ) : (
+                  <ChevronDown className="w-5 h-5" />
+                )}
+              </div>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <p className="text-gray-700 leading-relaxed">
-                  Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
-                  Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-700 leading-relaxed">
-                  Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung. 
-                  Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
-                </p>
+          </div>
+
+          {/* Expandable Content */}
+          <div className={`transition-all duration-200 overflow-hidden ${
+            isDefinitionExpanded ? 'max-h-[800px] opacity-100 mt-6' : 'max-h-0 opacity-0'
+          }`}>
+            <div className="bg-white rounded-lg p-8 border border-gray-200">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Die betriebliche Altersvorsorge (bAV) ist eine Form der privaten Altersvorsorge, die über den Arbeitgeber organisiert wird. 
+                    Sie ergänzt die gesetzliche Rente und bietet Arbeitnehmern die Möglichkeit, zusätzliche Rentenansprüche aufzubauen.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Dabei wird ein Teil des Bruttogehalts für die Altersvorsorge verwendet, wodurch sich die Steuer- und Sozialabgabenlast reduziert.
+                  </p>
+                  
+                  {/* Visual Alert for Legal Claim */}
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <AlertTriangle className="w-4 h-4 text-red-600" />
+                    </div>
+                    <div>
+                      <h4 className="text-red-800 font-semibold text-sm mb-1">Wichtiger Rechtshinweis</h4>
+                      <p className="text-red-700 text-sm leading-relaxed">
+                        <strong>Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf betriebliche Altersvorsorge durch Entgeltumwandlung.</strong> 
+                        Dieser Anspruch ist gesetzlich verankert und kann nicht verwehrt werden.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
