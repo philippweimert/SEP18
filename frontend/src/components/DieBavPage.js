@@ -705,7 +705,6 @@ const DieBavPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {benefitsCards.map((card, index) => (
               <div key={`info-${index}`} className="text-center">
-                <h3 className="text-xl font-semibold text-white mb-3">{card.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{card.description}</p>
               </div>
             ))}
