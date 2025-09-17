@@ -645,7 +645,7 @@ const DieBavPage = () => {
                   
                   {/* Icon Container */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 animate-float">
+                    <div className="w-14 h-14">
                       {card.icon}
                     </div>
                   </div>
