@@ -142,15 +142,15 @@ const GoogleReviews = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-6 bg-white/5 rounded-2xl px-8 py-4">
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center space-x-6 bg-black/20 rounded-xl px-6 py-3">
             <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               <span className="text-gray-300 text-sm font-medium">Verifizierte Bewertungen</span>
             </div>
-            <div className="h-4 w-px bg-white/20"></div>
+            <div className="h-3 w-px bg-white/20"></div>
             <div className="flex items-center space-x-2">
-              <span className="text-acencia-accent font-bold text-lg">100+</span>
+              <span className="text-acencia-accent font-bold text-base">100+</span>
               <span className="text-gray-300 text-sm">Zufriedene Kunden</span>
             </div>
           </div>
