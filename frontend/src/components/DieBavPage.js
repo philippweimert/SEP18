@@ -612,17 +612,9 @@ const DieBavPage = () => {
               <div key={index} className="flex flex-col items-center">
                 {/* Hexagonal Card */}
                 <div 
-                  className="relative w-full h-36 rounded-3xl cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-7 mb-5"
+                  className="relative w-full h-36 bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-7 mb-5"
                   style={{
-                    background: 'linear-gradient(145deg, #0b2a3d 0%, #0a2637 100%)',
-                    boxShadow: '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)',
                     borderRadius: '22px'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(11,42,61,.2), 0 8px 16px rgba(11,42,61,.12), 0 0 0 1px rgba(236,210,184,.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(11,42,61,.15), 0 4px 12px rgba(11,42,61,.08)';
                   }}
                 >
                   {/* Hexagon Badge */}
