@@ -418,6 +418,70 @@ const DieBavPage = () => {
         </div>
       </section>
 
+      {/* Process Support Section */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+              Wir begleiten Sie entlang aller Prozesse - dauerhaft
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full"
+              >
+                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-6 h-6 bg-gray-300 rounded"></div>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Platzhalter {index}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Hier wird später der Inhalt für Karte {index} eingefügt.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="bg-gray-50 py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+              Ihre Vorteile
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-150 h-full"
+              >
+                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-6 h-6 bg-gray-300 rounded"></div>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Vorteil {index}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Hier wird später der Inhalt für Vorteil {index} eingefügt.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* More Info Section */}
       <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
