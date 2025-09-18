@@ -1,0 +1,365 @@
+/* ACENCIA Design System - Einheitliche UI-Komponenten */
+
+/* ============================= */
+/* 1. SPACING SYSTEM */
+/* ============================= */
+:root {
+  /* Konsistente Abstände für Sektionen */
+  --section-padding-mobile: 3rem; /* 48px */
+  --section-padding-desktop: 5rem; /* 80px */
+  --section-gap: 4rem; /* 64px zwischen Sektionen */
+  
+  /* Content Spacing */
+  --content-gap-xs: 0.5rem;  /* 8px */
+  --content-gap-sm: 1rem;    /* 16px */
+  --content-gap-md: 1.5rem;  /* 24px */
+  --content-gap-lg: 2rem;    /* 32px */
+  --content-gap-xl: 3rem;    /* 48px */
+}
+
+/* ============================= */
+/* 2. EINHEITLICHE SEKTIONEN */
+/* ============================= */
+.section-standard {
+  padding-top: var(--section-padding-mobile);
+  padding-bottom: var(--section-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-standard {
+    padding-top: var(--section-padding-desktop);
+    padding-bottom: var(--section-padding-desktop);
+  }
+}
+
+/* Kompakte Sektion für weniger wichtige Bereiche */
+.section-compact {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .section-compact {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Hero Section - Einheitlich für alle Seiten */
+.hero-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* ============================= */
+/* 3. CONTAINER SYSTEM */
+/* ============================= */
+.container-standard {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-standard {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ============================= */
+/* 4. CARD KOMPONENTEN */
+/* ============================= */
+.card-base {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(250, 153, 57, 0.3);
+}
+
+.card-compact {
+  padding: 1.5rem;
+}
+
+.card-accent {
+  border-color: rgba(250, 153, 57, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ============================= */
+/* 5. BUTTON SYSTEM */
+/* ============================= */
+.btn-primary {
+  background-color: #fa9939;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #e88a33;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(250, 153, 57, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 2px solid rgba(250, 153, 57, 0.5);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(250, 153, 57, 0.1);
+  border-color: #fa9939;
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* 6. TYPOGRAPHY SYSTEM */
+/* ============================= */
+.heading-primary {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+.heading-secondary {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: white;
+}
+
+.heading-tertiary {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: white;
+}
+
+.text-lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+.text-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #9ca3af;
+}
+
+/* ============================= */
+/* 7. GRID LAYOUTS */
+/* ============================= */
+.grid-standard {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-standard {
+    gap: 3rem;
+  }
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-3-cols {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================= */
+/* 8. UTILITY CLASSES */
+/* ============================= */
+.no-gap {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.reduce-gap {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .reduce-gap {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* Smooth scroll behavior */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Focus states */
+.focus-visible:focus-visible {
+  outline: 2px solid #fa9939;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* ============================= */
+/* 9. ANIMATION CLASSES */
+/* ============================= */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* 10. RESPONSIVE HELPERS */
+/* ============================= */
+.mobile-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* ============================= */
+/* 11. BACKGROUND VARIATIONS */
+/* ============================= */
+.bg-primary {
+  background-color: #001f3d;
+}
+
+.bg-primary-dark {
+  background-color: #001529;
+}
+
+.bg-accent-gradient {
+  background: linear-gradient(135deg, #001f3d 0%, #0d2847 100%);
+}
+
+.bg-card-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+/* ============================= */
+/* 12. LIST STYLES */
+/* ============================= */
+.list-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.list-features li::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fa9939;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
