@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { APP_CONFIG } from "../lib/config";
 import { Button } from "./ui/button";
 import { CheckCircle, Clock, Shield, ArrowRight, Play } from "lucide-react";
 import { useLocation, Link } from "react-router-dom";
@@ -180,7 +181,7 @@ const HeroSection = () => {
               <Button 
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg group"
-                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
               >
                 <span>Jetzt starten</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />

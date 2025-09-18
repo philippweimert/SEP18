@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckCircle, Settings, Users, ArrowRight } from "lucide-react";
+import { APP_CONFIG } from "../lib/config";
 
 const ProcessSection = () => {
   const processSteps = [
@@ -118,13 +119,13 @@ const ProcessSection = () => {
                     <div className="flex flex-col space-y-4">
                       <button 
                         className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
-                        onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                        onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
                       >
                         Jetzt starten
                       </button>
                       <button 
                         className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm"
-                        onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                        onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
                       >
                         Beratung buchen
                       </button>

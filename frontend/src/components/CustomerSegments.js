@@ -1,4 +1,5 @@
 import React from "react";
+import { APP_CONFIG } from "../lib/config";
 
 const CustomerSegments = () => {
   const segments = [
@@ -172,7 +173,7 @@ const CustomerSegments = () => {
         <div className="text-center mt-16">
           <button 
             className="bg-acencia-accent hover:bg-acencia-accent-hover text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg"
-            onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+            onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
           >
             Beratung für Ihr Unternehmen
           </button>

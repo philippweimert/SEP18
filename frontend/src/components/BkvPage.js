@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
 import { Shield, Users, TrendingUp, ArrowRight, Building2, Heart, CheckCircle, Play } from "lucide-react";
+import { APP_CONFIG } from "../lib/config";
 
 const BkvPage = () => {
   const location = useLocation();
@@ -51,7 +52,7 @@ const BkvPage = () => {
               <div className="mb-8">
                 <Button 
                   className="bg-acencia-accent hover:bg-acencia-accent-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
-                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                  onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
                 >
                   <span>Jetzt informieren</span>
                   <ArrowRight className="w-4 h-4" />

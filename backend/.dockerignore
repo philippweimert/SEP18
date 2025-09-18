@@ -1,0 +1,12 @@
+# Docker ignore for backend
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.git/
+.github/
+.cache/
+build/
+dist/
+.env*

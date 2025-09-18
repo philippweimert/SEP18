@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { APP_CONFIG } from "../lib/config";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -195,7 +196,7 @@ const Header = () => {
               {/* Login Portal */}
               <Button 
                 className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-400 hover:scale-105 shadow-md text-sm"
-                onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
+                onClick={() => window.open(APP_CONFIG.LOGIN_PORTAL_URL, '_blank')}
               >
                 Login Portal
               </Button>
@@ -434,7 +435,7 @@ const Header = () => {
               <Button 
                 className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl py-3 transition-all duration-300"
                 onClick={() => {
-                  window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank');
+                  window.open(APP_CONFIG.LOGIN_PORTAL_URL, '_blank');
                   setIsMenuOpen(false);
                 }}
               >

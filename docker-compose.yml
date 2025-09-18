@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - ENVIRONMENT=development
+      - CORS_ORIGINS=*
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend:rw
+    command: uvicorn server:app --host 0.0.0.0 --port 8000 --app-dir /app/backend --reload
+
+  frontend:
+    working_dir: /app/frontend
+    image: node:20-alpine
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend:rw
+    command: sh -c "yarn install && yarn start"

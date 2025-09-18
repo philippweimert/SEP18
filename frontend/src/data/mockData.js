@@ -221,7 +221,7 @@ export const contactInfo = {
 export const navigationLinks = [
   { text: "Über uns", path: "/ueber-uns" },
   { text: "Kontakt", path: "/kontakt" },
-  { text: "Login Portal", external: true, url: "https://www.smartcloudservices.de/acencia/login/login.do" }
+  { text: "Login Portal", external: true, url: process.env.REACT_APP_LOGIN_PORTAL_URL || "https://www.smartcloudservices.de/acencia/login/login.do" }
 ];
 
 export const footerLinks = {
@@ -240,6 +240,6 @@ export const footerLinks = {
 
 // External URLs
 export const externalUrls = {
-  appointmentBooking: "https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/",
+  appointmentBooking: process.env.REACT_APP_BOOKING_URL || "https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/",
   originalWebsite: "https://www.acencia.de/"
 };

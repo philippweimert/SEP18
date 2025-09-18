@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { APP_CONFIG } from "../lib/config";
 import { 
   BarChart3, 
   TrendingUp, 
@@ -220,7 +221,7 @@ const BusinessBenefitsGrid = () => {
         <div className="text-center">
           <Button 
             className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-lg"
-            onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+            onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
           >
             Jetzt Termin vereinbaren
             <ArrowRight className="w-5 h-5 ml-2" />

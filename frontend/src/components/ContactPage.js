@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { APP_CONFIG } from "../lib/config";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
@@ -205,7 +206,7 @@ const ContactPage = () => {
                 </p>
                 <Button 
                   className="w-full bg-acencia-accent hover:bg-acencia-accent-hover text-white px-4 py-3 rounded-lg font-medium transition-colors duration-150"
-                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                  onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
                 >
                   Termin online buchen
                 </Button>

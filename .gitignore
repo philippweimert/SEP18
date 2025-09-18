@@ -1,70 +1,64 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/
 
-# IDE and editors
+# IDE/editor
 .idea/
 .vscode/
+.history/
 
-# Dependencies
+# Node
 node_modules/
-/node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+coverage/
 
-# Testing
-/coverage
-
-# Next.js
+# Next.js / React builds
 /.next/
 /out/
-next-env.d.ts
-*.tsbuildinfo
-
-# Production builds
-/build
+/build/
 dist/
-dist
+*.tsbuildinfo
+next-env.d.ts
 
-# Environment files (comprehensive coverage)
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+.venv/
 
-*token.json*
-*credentials.json*
-
-# Logs and debug files
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-dump.rdb
 
-# System files
+# OS / system
 .DS_Store
+Thumbs.db
 *.pem
 
-# Python
-__pycache__/
-*pyc*
-venv/
-.venv/
+# Env files and credentials
+.env
+.env.*
+*.env
+*token.json*
+*credentials.json*
 
-# Development tools
-chainlit.md
-.chainlit
+# Tooling
 .ipynb_checkpoints/
+.chainlit
 .ac
-
-# Deployment
+.cache/
 .vercel
 
-# Data and databases
-agenthub/agents/youtube/db
-
-# Archive files and large assets
+# Archives / large binaries
 **/*.zip
 **/*.tar.gz
 **/*.tar
@@ -72,112 +66,3 @@ agenthub/agents/youtube/db
 *.pack
 *.deb
 *.dylib
-
-# Build caches
-.cache/
-
-# Mobile development
-android-sdk/ -e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
