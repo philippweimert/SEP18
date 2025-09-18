@@ -9,10 +9,10 @@ export const UnifiedSection = ({
   noPadding = false
 }) => {
   const variantClasses = {
-    standard: 'py-12 md:py-20', // Einheitlich 48px mobile, 80px desktop
-    compact: 'py-8 md:py-12',   // Kompakter für weniger wichtige Bereiche
-    hero: 'py-16 md:py-24',      // Hero Sections
-    tight: 'py-6 md:py-10',      // Sehr kompakt
+		standard: 'py-10 md:py-16', // Einheitlich 40px mobile, 64px desktop
+		compact: 'py-6 md:py-10',   // Kompakter für weniger wichtige Bereiche
+		hero: 'py-14 md:py-20',      // Hero Sections
+		tight: 'py-4 md:py-6',       // Sehr kompakt
     none: ''                      // Kein Padding
   };
 
