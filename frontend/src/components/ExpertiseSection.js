@@ -1,4 +1,5 @@
 import React from "react";
+import { APP_CONFIG } from "../lib/config";
 import { Button } from "./ui/button";
 
 const ExpertiseSection = () => {
@@ -51,7 +52,7 @@ const ExpertiseSection = () => {
                 size="lg"
                 variant="outline"
                 className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 px-6 py-2 font-medium rounded-lg transition-all duration-400 hover:scale-105 micro-bounce text-body shadow-lg"
-                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
               >
                 Jetzt beraten lassen
               </Button>

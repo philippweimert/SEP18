@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { APP_CONFIG } from "../lib/config";
 import { Link, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -235,7 +236,7 @@ const DieBavPage = () => {
               <div className="mb-8">
                 <Button 
                   className="bg-acencia-accent hover:bg-acencia-accent-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
-                  onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                  onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
                 >
                   <span>Jetzt starten</span>
                   <ArrowRight className="w-4 h-4" />

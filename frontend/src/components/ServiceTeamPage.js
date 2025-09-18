@@ -1,4 +1,5 @@
 import React from "react";
+import { APP_CONFIG } from "../lib/config";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
@@ -220,7 +221,7 @@ const ServiceTeamPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="bg-acencia-accent hover:bg-acencia-accent-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
-                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
               >
                 <span>Beratungstermin vereinbaren</span>
                 <ArrowRight className="w-4 h-4" />

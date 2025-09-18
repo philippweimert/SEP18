@@ -1,3 +1,10 @@
+"""FastAPI backend application providing health/status endpoints and a contact form API.
+
+This module is intentionally database-agnostic. It uses in-memory stubs and logging
+to keep the app portable across environments. Configuration is loaded via .env files
+with support for environment-specific overrides.
+"""
+
 from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
@@ -10,6 +17,16 @@ import uuid
 from datetime import datetime
 
 ROOT_DIR = Path(__file__).parent
+# Load environment variables with environment-aware precedence.
+# If ENVIRONMENT is set (development|staging|production), load corresponding .env file first.
+# Fallback to .env in the backend directory. This keeps configuration portable and explicit.
+environment_name = os.environ.get('ENVIRONMENT', '').strip().lower()
+if environment_name:
+    env_file_candidate = ROOT_DIR / f".env.{environment_name}"
+    if env_file_candidate.exists():
+        load_dotenv(env_file_candidate)
+
+# Always attempt to load base .env last so it can provide defaults without overriding specific envs
 load_dotenv(ROOT_DIR / '.env')
 
 # Create the main app without a prefix
@@ -21,14 +38,17 @@ api_router = APIRouter(prefix="/api")
 
 # Define Models
 class StatusCheck(BaseModel):
+    """Represents a simple status/heartbeat record for a client."""
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
     timestamp: datetime = Field(default_factory=datetime.utcnow)
 
 class StatusCheckCreate(BaseModel):
+    """Input model for creating a new status/heartbeat record."""
     client_name: str
 
 class ContactForm(BaseModel):
+    """Payload for contact form submissions."""
     name: str
     email: EmailStr
     company: Optional[str] = None
@@ -37,7 +57,11 @@ class ContactForm(BaseModel):
 
 # Email configuration
 async def send_email(contact_data: ContactForm):
-    """Send contact form data via email"""
+    """Send contact form data via email.
+
+    Note: This implementation logs the message for demonstration purposes.
+    In production, integrate an SMTP or transactional email provider.
+    """
     try:
         # Email body
         body = f"""
@@ -67,10 +91,12 @@ Gesendet am: {datetime.now().strftime('%d.%m.%Y um %H:%M:%S')}
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
+    """Health check endpoint to verify the API is running."""
     return {"message": "Hello World"}
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
+    """Create and return a new status check object (mocked persistence)."""
     status_dict = input.dict()
     status_obj = StatusCheck(**status_dict)
     # Mock database insertion
@@ -79,6 +105,7 @@ async def create_status_check(input: StatusCheckCreate):
 
 @api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
+    """Return a list of mock status checks (no database required)."""
     # Mock database fetch
     logger.info("Mocking fetching status checks.")
     mock_checks = [
@@ -89,6 +116,7 @@ async def get_status_checks():
 
 @api_router.post("/contact")
 async def submit_contact_form(contact_data: ContactForm):
+    """Handle a contact form submission by delegating to the email helper."""
     """Handle contact form submission"""
     try:
         result = await send_email(contact_data)

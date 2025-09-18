@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckCircle, Settings, Users, ArrowRight } from "lucide-react";
+import { APP_CONFIG } from "../lib/config";
 import { Button } from "./ui/button";
 
 const ProcessSectionHomepage = () => {
@@ -112,7 +113,7 @@ const ProcessSectionHomepage = () => {
             <Button 
               size="lg"
               className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-400 hover:scale-105 shadow-lg text-body"
-              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+              onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
             >
               Jetzt starten
             </Button>
@@ -120,7 +121,7 @@ const ProcessSectionHomepage = () => {
               size="lg"
               variant="outline"
               className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-400 micro-bounce text-body"
-              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+              onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
             >
               Beratung buchen
             </Button>
