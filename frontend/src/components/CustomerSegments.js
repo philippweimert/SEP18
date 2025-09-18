@@ -75,12 +75,12 @@ const CustomerSegments = () => {
         </div>
 
         {/* Premium Cards - 3x1 Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto cards-grid-hex">
           {segments.map((segment, index) => (
             <div key={segment.id} className="flex flex-col items-center">
               {/* Hexagonal Card */}
               <div 
-                className="relative w-full h-36 bg-black/30 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-black/40 cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-7 mb-5"
+                className="relative w-full h-36 hex-badge-card backdrop-blur-sm rounded-3xl border border-white/10 cursor-pointer transition-all duration-500 ease-out group hover:-translate-y-2 hover:scale-105 flex items-center justify-center pt-7 mb-5"
                 style={{
                   borderRadius: '22px'
                 }}
