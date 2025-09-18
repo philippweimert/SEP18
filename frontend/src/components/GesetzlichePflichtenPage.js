@@ -2,6 +2,7 @@ import React from "react";
 import { APP_CONFIG } from "../lib/config";
 import Header from "./Header";
 import Footer from "./Footer";
+import { UnifiedSection, UnifiedContainer, UnifiedHeading, UnifiedButton } from "./ui/UnifiedSection";
 import { Button } from "./ui/button";
 import { Scale, AlertTriangle, CheckCircle, FileText, Users, ArrowRight, Calendar, Building2 } from "lucide-react";
 
@@ -53,25 +54,19 @@ const GesetzlichePflichtenPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
-              Rechtlicher <span className="text-acencia-accent">Rahmen</span> – bAV
-            </h1>
-            <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-              Was Arbeitgeber bei der betrieblichen Altersvorsorge beachten müssen
-            </p>
-            <p className="text-sm text-gray-400">
-              Informationen aus dem Geschäftsbetrieb gemäß §93 HGB
-            </p>
+      <UnifiedSection variant="hero">
+        <UnifiedContainer>
+          <div className="text-center">
+            <UnifiedHeading level={1}>Rechtlicher <span className="text-acencia-accent">Rahmen</span> – bAV</UnifiedHeading>
+            <p className="text-xl text-gray-300 mt-6 mb-4 leading-relaxed">Was Arbeitgeber bei der betrieblichen Altersvorsorge beachten müssen</p>
+            <p className="text-sm text-gray-400">Informationen aus dem Geschäftsbetrieb gemäß §93 HGB</p>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
       {/* Two Boxes Side by Side Section */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+      <UnifiedSection variant="standard" className="!pt-0">
+        <UnifiedContainer>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Left Box - Rechtlicher Rahmen */}
@@ -146,12 +141,12 @@ const GesetzlichePflichtenPage = () => {
             </div>
 
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
       {/* Steuerrechtliche Grundlagen Section */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+      <UnifiedSection variant="standard" className="!pt-0">
+        <UnifiedContainer>
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center mr-4">
@@ -235,12 +230,12 @@ const GesetzlichePflichtenPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
       {/* Pflichten & Chancen Section */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+      <UnifiedSection variant="standard" className="!pt-0">
+        <UnifiedContainer>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-white mb-4 tracking-tight">
               Pflichten & Chancen für Arbeitgeber
@@ -367,20 +362,14 @@ const GesetzlichePflichtenPage = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button 
-              className="bg-acencia-accent/70 hover:bg-acencia-accent text-white px-8 py-4 rounded-lg font-medium transition-colors duration-150 flex items-center space-x-2 mx-auto"
-              onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
-            >
-              <Calendar className="w-5 h-5" />
-              <span>Pflichten & Chancen besprechen - Kostenloses Erstgespräch</span>
-            </Button>
+            <UnifiedButton onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')} icon={<Calendar className="w-5 h-5" />}>Pflichten & Chancen besprechen - Kostenloses Erstgespräch</UnifiedButton>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
       {/* Risks Section */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+      <UnifiedSection variant="standard" className="!pt-0">
+        <UnifiedContainer>
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-red-600/20 rounded-lg flex items-center justify-center mr-4">
@@ -407,12 +396,12 @@ const GesetzlichePflichtenPage = () => {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
       {/* Solution Section */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+      <UnifiedSection variant="standard" className="!pt-0">
+        <UnifiedContainer>
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-acencia-accent/20 rounded-lg flex items-center justify-center mr-4">
@@ -462,12 +451,12 @@ const GesetzlichePflichtenPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
       {/* Call to Action */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+      <UnifiedSection variant="standard" className="!pt-0">
+        <UnifiedContainer>
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-acencia-accent/30 text-center">
             <div className="w-16 h-16 bg-acencia-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <Calendar className="w-8 h-8 text-acencia-accent" />
@@ -479,24 +468,10 @@ const GesetzlichePflichtenPage = () => {
               Lassen Sie sich von unseren Experten beraten, wie Sie den rechtlichen Rahmen optimal nutzen 
               und gleichzeitig von allen Chancen und Vorteilen der bAV profitieren können.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="bg-acencia-accent/70 hover:bg-acencia-accent text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2"
-                onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')}
-              >
-                <span>Kostenlose Beratung vereinbaren</span>
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-              <Button 
-                className="bg-black/40 border border-white/20 hover:bg-black/60 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150"
-                onClick={() => window.location.href = '/die-bav'}
-              >
-                Zurück zur bAV-Übersicht
-              </Button>
-            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"><UnifiedButton onClick={() => window.open(APP_CONFIG.BOOKING_URL, '_blank')} icon={<ArrowRight className="w-4 h-4" />}>Kostenlose Beratung vereinbaren</UnifiedButton><Button className="bg-black/40 border border-white/20 hover:bg-black/60 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150" onClick={() => window.location.href = '/die-bav'}>Zurück zur bAV-Übersicht</Button></div>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
       <Footer />
     </div>

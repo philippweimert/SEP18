@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';
+import { UnifiedSection, UnifiedContainer, UnifiedCard, UnifiedHeading } from "./ui/UnifiedSection";
 import { Button } from "./ui/button";
 import { Calendar, Clock, User, BookOpen, Scale, Gavel, TrendingUp, Filter, Search, ArrowRight } from 'lucide-react';
 
@@ -118,154 +119,72 @@ const AktuellesPage = () => {
     <div className="min-h-screen" style={{backgroundColor: '#001f3d'}}>
       <Header />
       
-      {/* Hero Section - Same structure as main pages */}
-      <section className="py-16 md:py-24" style={{backgroundColor: '#001f3d'}}>
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight tracking-tight">
-              Aktuelles zur <span className="text-acencia-accent">bAV</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-              Bleiben Sie informiert über die neuesten Entwicklungen, Gesetze und Trends in der bAV
-            </p>
-            <p className="text-sm text-gray-400">
-              Informationen aus dem Geschäftsbetrieb gemäß §93 HGB
-            </p>
+      <UnifiedSection variant="hero">
+        <UnifiedContainer>
+          <div className="text-center">
+            <UnifiedHeading level={1}>Aktuelles zur <span className="text-acencia-accent">bAV</span></UnifiedHeading>
+            <p className="text-xl text-gray-300 mt-6 mb-4 leading-relaxed">Bleiben Sie informiert über die neuesten Entwicklungen, Gesetze und Trends in der bAV</p>
+            <p className="text-sm text-gray-400">Informationen aus dem Geschäftsbetrieb gemäß §93 HGB</p>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
 
-      {/* Filter Section */}
-      <section className="py-16 md:py-20" style={{backgroundColor: '#001f3d'}}>
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-white/10 mb-12">
+      <UnifiedSection variant="standard" className="!pt-0">
+        <UnifiedContainer>
+          <UnifiedCard className="mb-12">
             <div className="flex flex-col md:flex-row gap-6 items-center">
-              {/* Search */}
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Artikel durchsuchen..."
-                  className="w-full pl-10 pr-4 py-3 bg-black/40 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-acencia-accent focus:border-transparent transition-all duration-150"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
+                <input type="text" placeholder="Artikel durchsuchen..." className="w-full pl-10 pr-4 py-3 bg-black/40 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-acencia-accent focus:border-transparent transition-all duration-150" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
               </div>
-
-              {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-150 ${
-                      selectedCategory === category
-                        ? 'bg-acencia-accent text-white'
-                        : 'bg-black/40 border border-white/20 text-gray-300 hover:bg-black/60'
-                    }`}
-                  >
+                  <button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-150 ${selectedCategory === category ? 'bg-acencia-accent text-white' : 'bg-black/40 border border-white/20 text-gray-300 hover:bg-black/60'}`}>
                     {category === 'alle' ? 'Alle Kategorien' : category}
                   </button>
                 ))}
               </div>
             </div>
-          </div>
+          </UnifiedCard>
 
-          {/* Articles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredArticles.map((article, index) => (
-              <a 
-                key={article.id}
-                href={article.url}
-                target={article.url !== '#' ? '_blank' : '_self'}
-                rel={article.url !== '#' ? 'noopener noreferrer' : ''}
-                className="block group"
-              >
-                <article className="bg-black/30 backdrop-blur-sm rounded-lg border border-white/10 overflow-hidden hover:bg-black/40 transition-all duration-150 h-full">
+            {filteredArticles.map((article) => (
+              <a key={article.id} href={article.url} target={article.url !== '#' ? '_blank' : '_self'} rel={article.url !== '#' ? 'noopener noreferrer' : ''} className="block group">
+                <UnifiedCard className="overflow-hidden p-0">
                   <div className="aspect-w-16 aspect-h-9">
-                    <img 
-                      src={article.image} 
-                      alt={article.title}
-                      className="w-full h-48 object-cover"
-                    />
+                    <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
                   </div>
-                  
                   <div className="p-6">
-                    {/* Category Badge */}
                     <div className="flex items-center gap-2 mb-4">
-                      <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>
-                        {getCategoryIcon(article.category)}
-                        {article.category}
-                      </span>
-                      {article.url !== '#' && (
-                        <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200">
-                          <ArrowRight className="w-3 h-3" />
-                          Extern
-                        </span>
-                      )}
+                      <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}>{getCategoryIcon(article.category)}{article.category}</span>
+                      {article.url !== '#' && (<span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full border border-blue-200"><ArrowRight className="w-3 h-3" />Extern</span>)}
                     </div>
-
-                    {/* Title */}
-                    <h3 className="text-lg font-semibold text-white mb-3 leading-tight group-hover:text-acencia-accent transition-colors duration-150 line-clamp-2">
-                      {article.title}
-                    </h3>
-
-                    {/* Excerpt */}
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
-                      {article.excerpt}
-                    </p>
-
-                    {/* Meta Info */}
+                    <h3 className="text-lg font-semibold text-white mb-3 leading-tight group-hover:text-acencia-accent transition-colors duration-150 line-clamp-2">{article.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">{article.excerpt}</p>
                     <div className="flex items-center justify-between text-xs text-gray-400 pt-4 border-t border-white/10">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1">
-                          <User className="w-3 h-3" />
-                          <span className="truncate max-w-20 text-gray-300">{article.author}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          <span className="text-gray-300">{article.readTime}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        <span className="text-gray-300">{new Date(article.date).toLocaleDateString('de-DE')}</span>
-                      </div>
+                      <div className="flex items-center gap-4"><div className="flex items-center gap-1"><User className="w-3 h-3" /><span className="truncate max-w-20 text-gray-300">{article.author}</span></div><div className="flex items-center gap-1"><Clock className="w-3 h-3" /><span className="text-gray-300">{article.readTime}</span></div></div>
+                      <div className="flex items-center gap-1"><Calendar className="w-3 h-3" /><span className="text-gray-300">{new Date(article.date).toLocaleDateString('de-DE')}</span></div>
                     </div>
-
-                    {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-4">
-                      {article.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-black/40 text-gray-300 text-xs rounded-md border border-white/10">
-                          #{tag}
-                        </span>
-                      ))}
+                      {article.tags.map((tag, tagIndex) => (<span key={tagIndex} className="px-2 py-1 bg-black/40 text-gray-300 text-xs rounded-md border border-white/10">#{tag}</span>))}
                     </div>
                   </div>
-                </article>
+                </UnifiedCard>
               </a>
             ))}
           </div>
 
-          {/* No Results */}
           {filteredArticles.length === 0 && (
-            <div className="text-center py-12">
-              <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Keine Artikel gefunden</h3>
-              <p className="text-gray-300">Versuchen Sie andere Suchbegriffe oder wählen Sie eine andere Kategorie.</p>
-            </div>
+            <div className="text-center py-12"><BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" /><h3 className="text-xl font-semibold text-white mb-2">Keine Artikel gefunden</h3><p className="text-gray-300">Versuchen Sie andere Suchbegriffe oder wählen Sie eine andere Kategorie.</p></div>
           )}
 
-          {/* Back to bAV Button */}
           <div className="text-center mt-12">
             <Link to="/die-bav">
-              <Button className="bg-black/40 border border-white/20 hover:bg-black/60 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150">
-                Zurück zur bAV Übersicht
-              </Button>
+              <Button className="bg-black/40 border border-white/20 hover:bg-black/60 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150">Zurück zur bAV Übersicht</Button>
             </Link>
           </div>
-        </div>
-      </section>
+        </UnifiedContainer>
+      </UnifiedSection>
       
       <Footer />
     </div>
